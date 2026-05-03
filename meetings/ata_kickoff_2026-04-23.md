@@ -12,7 +12,7 @@
 
 - **Roger** — Roteirista, Co-criador do Projeto Atama (mentor do curso)
 - **Rose** — Produtora Audiovisual, Co-criadora (mentora do curso)
-- **Nicolas** — Product Manager / Agile Coach / Tech Lead (plataforma e site)
+- **Nicolas** — Product Designer / Product Manager / Agile Coach / Tech Lead (plataforma e site)
 
 ---
 
