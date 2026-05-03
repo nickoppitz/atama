@@ -1,0 +1,24 @@
+# Pastas excluídas do git
+arquivos/
+meetings/
+
+# Claude Code
+.claude/settings.local.json
+.claude/shell-snapshots/
+.claude/*.log
+
+# Node (se usar)
+node_modules/
+package-lock.json
+.env
+.env.local
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
