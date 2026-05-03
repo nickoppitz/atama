@@ -14,7 +14,7 @@ Dois produtos integrados no mesmo ecossistema:
 
 | Versão | Escopo | Deadline | Status |
 |--------|--------|----------|--------|
-| **V1 (MVP)** | Lab com Curso Carruchef + Site enxugado | **31 de maio de 2026** | 🔴 Em andamento |
+| **V1 (MVP)** | Lab com Curso Carro-Chefe (piloto) + Site enxugado | **31 de maio de 2026** | 🔴 Em andamento |
 | **V2** | Plataforma completa (masterclasses, pagamentos, gravações) | Junho/Julho | Planejado |
 | **V3** | Site completo + melhorias encontradas em produção | Agosto+ | Futuro |
 
@@ -24,7 +24,7 @@ Toda decisão de feature, priorização e trade-off deve filtrar por: **isso mov
 
 | KPI | Meta | Responsável | Status |
 |-----|------|-------------|--------|
-| **Inscrições no Curso Carruchef** | Turma com 10+ alunos em junho | Rogério + Rose | 📊 Monitorar |
+| **Inscrições no Curso Carro-Chefe** (curso piloto do Lab) | Turma com 10+ alunos em junho | Rogério + Rose | 📊 Monitorar |
 | **Conversão site → Lab** | Em menos de 2 cliques | Nicolas (Design + Tech) | 📊 Validar |
 | **Pagamento funcional** | Mercado Pago operacional no lançamento | Nicolas (Tech) | 📊 Implementar |
 | **Time to launch** | Site + plataforma V1 no ar até 31 de maio | Nicolas (PM) | 🔴 CRÍTICO |
@@ -72,7 +72,7 @@ Sempre questionar: "Essa feature move um KPI?"
 - [ ] Negociação Casa da Chakra com Laura (amanhã) — confirmar espaço para Lab presencial
 - [ ] Definir personas e público-alvo do Lab com Rogério + Rose (terça)
 - [ ] Benchmark de UI e referências (terça)
-- [ ] Syllabus do Curso Carruchef finalizado (quarta)
+- [ ] Syllabus do Curso Carro-Chefe finalizado (quarta)
 - [ ] Wireframes/prototipo site V1 (quinta)
 - [ ] Setup técnico plataforma iniciado (sexta)
 

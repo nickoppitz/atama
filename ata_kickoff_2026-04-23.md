@@ -13,19 +13,19 @@
 - **Roger** — Roteirista, Co-criador do Projeto Atama (mentor do curso)
 - **Rose** — Produtora Audiovisual, Co-criadora (mentora do curso)
 - **Nicolás** — Product Manager / Agile Coach / Tech Lead (plataforma e site)
-- **Amanda** — Especialista em UX (interface e experiência)
+- **Amanda** — Funcionária da Atama
 - **Marcelo** — Contador da Atama (questões fiscais e pagamento)
-- **Laura** — Parceira (negociação de espaço físico - Casa da Chakra)
+- **Laura** — Parceira (negociação de espaço físico - Casa da Chácara)
 - **Evelyn Fernandes** — Aluna/Realizadora (case study)
 
 ---
 
 ## CONTEXTO & OBJETIVOS
 
-A Atama Films (produtora audiovisual independente) está entrando em um novo modelo de negócio para garantir **rentabilidade em mercado com alta imprevisibilidade**. O projeto de lançamento é:
+A Atama Filmes (produtora audiovisual independente) está entrando em um novo modelo de negócio para garantir **rentabilidade em mercado com alta imprevisibilidade**. O projeto de lançamento é:
 
 1. **Atama Lab** — Plataforma de cursos + espaço presencial com vivência prática
-2. **Curso Inaugural "Carruchef"** — Curso de 2 semanas (20h) que trata "Da Ideia às Diferentes Telas"
+2. **Curso Piloto "Carro-Chefe"** — Curso de 2 semanas (20h) que trata "Da Ideia às Diferentes Telas" *(curso piloto para testar e lançar o Atama Lab)*
 3. **Site Atama renovado** — Integrado com a plataforma de cursos
 
 **Prazo de Lançamento:** Final de maio de 2026 (30 dias a partir de 23/04)
@@ -35,7 +35,7 @@ A Atama Films (produtora audiovisual independente) está entrando em um novo mod
 ## DECISÕES TOMADAS
 
 ### 1. **Modelo de Negócio: Duplo Produto**
-- ✅ **Curso Carruchef** = fonte de receita (produto principal)
+- ✅ **Curso Carro-Chefe** = fonte de receita (produto principal)
 - ✅ **Lab presencial** = branding e posicionamento (produto complementar, não lucrativo)
   - Poucos participantes selecionados
   - Foco em experimentação prática
@@ -67,7 +67,7 @@ A Atama Films (produtora audiovisual independente) está entrando em um novo mod
 - ✅ Teaser com prêmios/festivais (ex: Beyond Us em San Francisco, Mostra Internacional)
 
 ### 6. **Modelo de Lançamento em Etapas (MVP + Roadmap)**
-- **MVP (Semana 1-4):** Plataforma completa com Curso Carruchef + Site enxugado
+- **MVP (Semana 1-4):** Plataforma completa com Curso Carro-Chefe + Site enxugado
 - **V2 (Semana 5+):** Site mais desenvolvido, novas funcionalidades
 - **Justificativa:** Não sobrecarregar escopo; lançar com produto vendível (curso)
 
@@ -82,7 +82,7 @@ A Atama Films (produtora audiovisual independente) está entrando em um novo mod
 
 ### 8. **Público-Alvo**
 - **Site Atama:** Produtoras, roteiristas, distribuidoras, co-produtores, pessoas em mercado audiovisual (profissional)
-- **Curso Carruchef:** Produtores iniciantes/independentes que surgiram com LPG/Lab (incentivos governamentais) — perdidos no mercado, precisam de orientação prática
+- **Curso Carro-Chefe:** Produtores iniciantes/independentes que surgiram com LPG/Lab (incentivos governamentais) — perdidos no mercado, precisam de orientação prática
 - **Abrangência:** Público brasileiro (português, não inglês na plataforma)
 - **Site:** Inglês + português (internacionalização da marca Atama como produtora)
 
@@ -155,7 +155,7 @@ A Atama Films (produtora audiovisual independente) está entrando em um novo mod
 | 5 | Recuperar/recriar imagens identidade visual | Roger | Quinta (30/04) | ⏳ |
 | 6 | Wireframes/prototipo site V1 | Amanda + Nicolás | Quinta (30/04) | ⏳ |
 | 7 | Contato com Nobre (mídias sociais) | Roger ou Rose | Quinta (30/04) | ⏳ |
-| 8 | Definir conteúdo/syllabus Curso Carruchef | Roger + Rose | Quarta (29/04) | ⏳ |
+| 8 | Definir conteúdo/syllabus Curso Carro-Chefe | Roger + Rose | Quarta (29/04) | ⏳ |
 | 9 | Setup técnico plataforma (backend/CMS) | Nicolás | Sexta (01/05) | ⏳ |
 | 10 | Dinâmica SSD (Certezas/Suposições/Dúvidas) com time | Nicolás | Sexta (01/05) | ⏳ |
 | 11 | Enviar transcrição + áudio desta reunião | Nicolás | Hoje (23/04) | ⏳ |
@@ -173,14 +173,14 @@ A Atama Films (produtora audiovisual independente) está entrando em um novo mod
 
 ### Médio Prazo (Próximas 2 Semanas)
 - Wireframes site V1 prontos
-- Syllabus curso Carruchef finalizado
+- Syllabus curso Carro-Chefe finalizado
 - Setup técnico plataforma iniciado
 - Contato com Nobre para estratégia de mídias
 
 ### Launch (Final de Maio)
 - Site V1 ativo
 - Plataforma Lab ativa
-- Primeiras inscrições abertas (Curso Carruchef de junho)
+- Primeiras inscrições abertas (Curso Carro-Chefe de junho)
 
 ---
 
@@ -214,7 +214,7 @@ A Atama Films (produtora audiovisual independente) está entrando em um novo mod
 ✅ Site + Lab integrados (um site só)  
 ✅ Fundo branco no site  
 ✅ Navegação clara (3 botões: About/Filmes/Lab)  
-✅ Curso Carruchef como primeiro produto  
+✅ Curso Carro-Chefe como primeiro produto  
 ✅ Público: produtores iniciantes do mercado emergente (LPG)  
 ✅ Diferencial: prática + mentorias vs. teórico  
 
