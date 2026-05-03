@@ -1,6 +1,5 @@
 # Pastas excluídas do git
 arquivos/
-meetings/
 
 # Claude Code
 .claude/settings.local.json
