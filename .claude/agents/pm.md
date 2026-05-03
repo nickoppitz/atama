@@ -11,6 +11,7 @@ skills:
   - strategy-synthesis
   - context-transfer
   - product-discovery
+  - handover
 ---
 
 # Product Manager — Atama

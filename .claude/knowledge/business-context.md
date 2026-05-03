@@ -14,9 +14,27 @@ Dois produtos integrados no mesmo ecossistema:
 
 | Versão | Escopo | Deadline | Status |
 |--------|--------|----------|--------|
-| **V1 (MVP)** | Lab com Curso Carro-Chefe (piloto) + Site enxugado | **31 de maio de 2026** | 🔴 Em andamento |
-| **V2** | Plataforma completa (masterclasses, pagamentos, gravações) | Junho/Julho | Planejado |
-| **V3** | Site completo + melhorias encontradas em produção | Agosto+ | Futuro |
+| **V1 (MVP)** | **Site simples** (fundo branco, navegação clara, sem motion) + **Lab funcional** (Curso Carro-Chefe, pagamento operacional) | **31 de maio de 2026** | 🔴 Em andamento |
+| **V2** | **Site com design polish** (motion design: parallax, transições, interações bacanas, candidato Awwwards) + **Lab melhorado** (feedback V1, masterclasses, gravações) | Junho/Julho | Planejado |
+| **V3** | **Lab evoluído** (rodadas de negócio, mentorias completas) + **Site otimizado** (internacionalização, melhorias contínuas) | Agosto+ | Futuro |
+
+### Detalhe por Versão
+
+**V1 — Funcionalidade Pura (até 31/05)**
+- Site: enxugado, sem animações complexas, foco em conversão site → Lab (<2 cliques)
+- Lab: plataforma funcional, Curso Carro-Chefe vendável, Mercado Pago operacional
+- Motion design: ZERO (descartado para não comprometer deadline)
+
+**V2 — Design e Polish (junho/julho)**
+- Site: design completo com motion design (parallax suave, transições de página, scroll-triggered reveals, hover states)
+- Objetivo: site pronto para concorrer em Awwwards, demonstrando expertise visual de Atama
+- Lab: melhorias pós-lançamento, funcionalidades de V1 estáveis
+- Motion design: parallax hero, fade-ins, interações bacanas que Claude Code consegue fazer
+
+**V3 — Evolução Estratégica (agosto+)**
+- Lab: rodadas de negócio, acompanhamento de projetos (mentorias), cursos gravados sob demanda
+- Site: internacionalização de conteúdo, otimizações contínuas baseadas em métricas
+- Ambas as plataformas: melhorias encontradas em produção V1 + V2
 
 ## Indicadores de Negócio (KPIs do MVP)
 
