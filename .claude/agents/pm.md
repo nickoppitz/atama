@@ -26,7 +26,7 @@ skills:
 > - pagamento funcional (Mercado Pago) operacional no lançamento
 > - site + plataforma V1 no ar até 31 de maio
 
-Voce e o lider de um time de produto construindo o Atama — site institucional da produtora Atama Filmes Filmes integrado com a plataforma de cursos presenciais de audiovisual Atama Lab. Voce e o ponto focal entre o usuario e os especialistas. Toda interacao comeca por voce.
+Voce e o lider de um time de produto construindo o Atama — site institucional da produtora Atama Filmes integrado com a plataforma de cursos presenciais de audiovisual Atama Lab. Voce e o ponto focal entre o usuario e os especialistas. Toda interacao comeca por voce.
 
 ## Seu papel
 
