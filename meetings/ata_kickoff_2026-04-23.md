@@ -4,7 +4,7 @@
 **Local:** Reunião remota (Google Meet)  
 **Duração:** ~2h  
 **Facilitador:** Roger/Agile Coach  
-**Registrador:** Nicolás  
+**Registrador:** Nicolas  
 
 ---
 
@@ -12,7 +12,12 @@
 
 - **Roger** — Roteirista, Co-criador do Projeto Atama (mentor do curso)
 - **Rose** — Produtora Audiovisual, Co-criadora (mentora do curso)
-- **Nicolás** — Product Manager / Agile Coach / Tech Lead (plataforma e site)
+- **Nicolas** — Product Manager / Agile Coach / Tech Lead (plataforma e site)
+
+---
+
+## STAKEHOLDERS
+
 - **Amanda** — Funcionária da Atama
 - **Marcelo** — Contador da Atama (questões fiscais e pagamento)
 - **Laura** — Parceira (negociação de espaço físico - Casa da Chácara)
@@ -114,7 +119,7 @@ A Atama Filmes (produtora audiovisual independente) está entrando em um novo mo
 ## DÚVIDAS EM ABERTO
 
 1. **Quem é o público exato do site vs. curso?**
-   - Nicolás: "Dois públicos diferentes, ambos importantes"
+   - Nicolas: "Dois públicos diferentes, ambos importantes"
    - Action: Definir personas em reunião dedicada
 
 2. **Quantos botões/seções no site principal?**
@@ -148,18 +153,18 @@ A Atama Filmes (produtora audiovisual independente) está entrando em um novo mo
 
 | # | Task | Responsável | Prazo | Status |
 |---|------|--|--------|--------|
-| 1 | Reunião fiscal: Mercado Pago + Stripe + PIX | Nicolás + Marcelo | Segunda-feira (27/04) | ⏳ |
+| 1 | Reunião fiscal: Mercado Pago + Stripe + PIX | Nicolas + Marcelo | Segunda-feira (27/04) | ⏳ |
 | 2 | Negociar Casa da Chakra | Laura | Amanhã (24/04) | ⏳ |
-| 3 | Definir personas (público site/curso) | Nicolás + Amanda | Terça (28/04) | ⏳ |
-| 4 | Pesquisa benchmark: Vitrine, Volcana, O2, Dóvo Cana | Nicolás | Terça (28/04) | ⏳ |
+| 3 | Definir personas (público site/curso) | Nicolas + Amanda | Terça (28/04) | ⏳ |
+| 4 | Pesquisa benchmark: Vitrine, Volcana, O2, Dóvo Cana | Nicolas | Terça (28/04) | ⏳ |
 | 5 | Recuperar/recriar imagens identidade visual | Roger | Quinta (30/04) | ⏳ |
-| 6 | Wireframes/prototipo site V1 | Amanda + Nicolás | Quinta (30/04) | ⏳ |
+| 6 | Wireframes/prototipo site V1 | Amanda + Nicolas | Quinta (30/04) | ⏳ |
 | 7 | Contato com Nobre (mídias sociais) | Roger ou Rose | Quinta (30/04) | ⏳ |
 | 8 | Definir conteúdo/syllabus Curso Carro-Chefe | Roger + Rose | Quarta (29/04) | ⏳ |
-| 9 | Setup técnico plataforma (backend/CMS) | Nicolás | Sexta (01/05) | ⏳ |
-| 10 | Dinâmica SSD (Certezas/Suposições/Dúvidas) com time | Nicolás | Sexta (01/05) | ⏳ |
-| 11 | Enviar transcrição + áudio desta reunião | Nicolás | Hoje (23/04) | ⏳ |
-| 12 | Pesquisa TikTok/mídias para cinema | Nicolás | Terça (28/04) | ⏳ |
+| 9 | Setup técnico plataforma (backend/CMS) | Nicolas | Sexta (01/05) | ⏳ |
+| 10 | Dinâmica SSD (Certezas/Suposições/Dúvidas) com time | Nicolas | Sexta (01/05) | ⏳ |
+| 11 | Enviar transcrição + áudio desta reunião | Nicolas | Hoje (23/04) | ⏳ |
+| 12 | Pesquisa TikTok/mídias para cinema | Nicolas | Terça (28/04) | ⏳ |
 
 ---
 
@@ -169,7 +174,7 @@ A Atama Filmes (produtora audiovisual independente) está entrando em um novo mo
 1. ✅ Reunião kickoff (concluída hoje)
 2. **Amanhã (24/04):** Laura negocia espaço presencial
 3. **Segunda (27/04):** Reunião fiscal com Marcelo
-4. **Terça (28/04):** Reunião UX/Personas com Amanda + Nicolás
+4. **Terça (28/04):** Reunião UX/Personas com Amanda + Nicolas
 
 ### Médio Prazo (Próximas 2 Semanas)
 - Wireframes site V1 prontos
@@ -259,6 +264,6 @@ A Atama Filmes (produtora audiovisual independente) está entrando em um novo mo
 
 ---
 
-*Ata elaborada por Nicolás — PM/Agile Coach  
+*Ata elaborada por Nicolas — PM/Agile Coach  
 Transcrição via Whisper (Modelo Base)  
 23 de abril de 2026*
