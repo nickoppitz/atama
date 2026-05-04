@@ -35,39 +35,39 @@ flowchart TD
     A4([QR Code / Divulgação]) --> LAB
 
     %% HOME
-    HOME["🏠 Home\n━━━━━━━━━━━\nHero: identidade visual\nAtama Filmes + Lab\n\n• CTA → Lab  ← 1 CLIQUE KPI\n• CTA → Filmes\nNav: Filmes | Sobre | Lab"]
+    HOME["🏠 Home<br>━━━━━━━━━━━<br>Hero: identidade visual<br>Atama Filmes + Lab<br><br>• CTA → Lab  ← 1 CLIQUE KPI<br>• CTA → Filmes<br>Nav: Filmes | Sobre | Lab"]
 
     %% DECISÃO NO HOME
-    HOME --> D1{O que o usuário\nquer?}
-    D1 -->|"Parceiro: conhecer\na produtora"| FILMES
-    D1 -->|"Aluno: aprender\naudiovisual"| LAB
+    HOME --> D1{O que o usuário<br>quer?}
+    D1 -->|"Parceiro: conhecer<br>a produtora"| FILMES
+    D1 -->|"Aluno: aprender<br>audiovisual"| LAB
 
     %% JORNADA PARCEIRO
-    FILMES["🎬 Filmes\n━━━━━━━━━━━\nPortfólio de projetos\n(Beyond Us, séries, docs)\nFestivais e prêmios\nFormatos: TV, cinema, web"]
+    FILMES["🎬 Filmes<br>━━━━━━━━━━━<br>Portfólio de projetos<br>(Beyond Us, séries, docs)<br>Festivais e prêmios<br>Formatos: TV, cinema, web"]
     FILMES --> SOBRE
-    SOBRE["👥 Sobre\n━━━━━━━━━━━\nRogério + Rose\nHistória da Atama\nFilosofia autoral\nCase: Comer, Beber e Aprender"]
-    SOBRE --> CONTATO["📬 Contato\n━━━━━━━━━━━\nFormulário\nEmail\nRedes sociais"]
+    SOBRE["👥 Sobre<br>━━━━━━━━━━━<br>Rogério + Rose<br>História da Atama<br>Filosofia autoral<br>Case: Comer, Beber e Aprender"]
+    SOBRE --> CONTATO["📬 Contato<br>━━━━━━━━━━━<br>Formulário<br>Email<br>Redes sociais"]
 
     %% JORNADA ALUNO — KPI CRÍTICO
-    LAB["🧪 Lab\n━━━━━━━━━━━\nO que é o Atama Lab\nCurso Carro-Chefe em destaque\n\nFormato: 2 semanas, 20h\nMentores: Rogério + Rose\nCase: Evelyn (aluna→realizadora)\n\n• CTA → Inscrição  ← 2 CLIQUES KPI"]
+    LAB["🧪 Lab<br>━━━━━━━━━━━<br>O que é o Atama Lab<br>Curso Carro-Chefe em destaque<br><br>Formato: 2 semanas, 20h<br>Mentores: Rogério + Rose<br>Case: Evelyn (aluna→realizadora)<br><br>• CTA → Inscrição  ← 2 CLIQUES KPI"]
 
-    LAB --> D2{Usuário decide\nse inscrever?}
+    LAB --> D2{Usuário decide<br>se inscrever?}
     D2 -->|Sim| CHECKOUT
-    D2 -->|"Ainda na dúvida"| FAQ["❓ Dúvidas Frequentes\n(inline na página Lab)\n• Nível exigido\n• Formato presencial\n• Local: Casa da Chácara\n• Investimento"]
+    D2 -->|"Ainda na dúvida"| FAQ["❓ Dúvidas Frequentes<br>(inline na página Lab)<br>• Nível exigido<br>• Formato presencial<br>• Local: Casa da Chácara<br>• Investimento"]
     FAQ --> D2
 
     %% CHECKOUT
-    CHECKOUT["💳 Checkout\n━━━━━━━━━━━\nMercado Pago\nPIX / Cartão\nNota fiscal (Marcelo)\n\nDados: nome, email,\ntelefone, CPF"]
+    CHECKOUT["💳 Checkout<br>━━━━━━━━━━━<br>Mercado Pago<br>PIX / Cartão<br>Nota fiscal (Marcelo)<br><br>Dados: nome, email,<br>telefone, CPF"]
 
-    CHECKOUT --> D3{Pagamento\naprovado?}
+    CHECKOUT --> D3{Pagamento<br>aprovado?}
     D3 -->|Sim| CONFIRMACAO
-    D3 -->|Não| ERRO["⚠️ Erro de pagamento\nOrientação para\ntentativa alternativa"]
+    D3 -->|Não| ERRO["⚠️ Erro de pagamento<br>Orientação para<br>tentativa alternativa"]
     ERRO --> CHECKOUT
 
     %% CONFIRMAÇÃO
-    CONFIRMACAO["✅ Confirmação\n━━━━━━━━━━━\nEmail de boas-vindas\nDetalhes da turma\nGrupo WhatsApp\nCalendário"]
+    CONFIRMACAO["✅ Confirmação<br>━━━━━━━━━━━<br>Email de boas-vindas<br>Detalhes da turma<br>Grupo WhatsApp<br>Calendário"]
 
-    CONFIRMACAO --> INSCRITO(["🎓 Aluno inscrito\nKPI atingido: +1 inscrição"])
+    CONFIRMACAO --> INSCRITO(["🎓 Aluno inscrito<br>KPI atingido: +1 inscrição"])
 
     %% ESTILO
     style HOME fill:#f5f5f5,stroke:#333,color:#000
