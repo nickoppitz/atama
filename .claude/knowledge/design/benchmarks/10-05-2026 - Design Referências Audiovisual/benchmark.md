@@ -27,7 +27,17 @@
 
 1. **Hotmart** (https://www.hotmart.com/pt-BR) — Plataforma de cursos online referência no Brasil, marketplace de produtos digitais
 2. **Domestika** (https://www.domestika.org) — Comunidade criativa com cursos, foco em artes e design
-3. **Futura.school** (https://www.futura.school/) — Escola de audiovisual + cursos, contexto similar ao Atama
+3. **Futura.school** (https://www.futura.school/) — Escola de audiovisual + cursos, contexto similar ao Atama *(domínio expirado em 2026)*
+
+### Screenshots de Referência
+
+![Hotmart](./screenshots/hotmart.png)
+
+![Domestika](./screenshots/domestika.png)
+
+![Futura.school](./screenshots/futura-school.png)
+
+---
 
 ### Achados: Navegação & Arquitetura
 
@@ -462,6 +472,16 @@ Text:
 1. **Coursera** (https://www.coursera.org) — Maior plataforma de cursos online global, foco em educação acessível
 2. **Udemy** (https://www.udemy.com) — Marketplace de cursos, grande volume, UX otimizada pra conversão
 3. **Skillshare** (https://www.skillshare.com) — Comunidade criativa + cursos, design-forward, audience similar a Atama
+
+### Screenshots de Referência
+
+![Coursera](./screenshots/coursera.png)
+
+![Udemy](./screenshots/udemy.png)
+
+![Skillshare](./screenshots/skillshare.png)
+
+---
 
 ### Achados: Componentes Primários
 
