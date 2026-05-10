@@ -21,7 +21,7 @@
 
 ---
 
-## Sites Analisados
+## Sites Analisados![[Captura de Tela 2026-05-10 às 19.47.22.png]]
 
 | Site | Origem | Contexto | Relevância |
 |------|--------|----------|------------|
