@@ -8,14 +8,14 @@ Base de conhecimento de design: referências visuais, guidelines, padrões e an�
 
 ```
 design/
-├── README.md                    ← Você está aqui
-├── guidelines.md                ← Guia visual (fundo branco, cores, tipografia) [TO-DO]
-├── benchmark-visual-ux.md       ← Report inicial do benchmark
-└── benchmark/                   ← Análise estruturada de 11 sites
-    ├── README.md
-    ├── references-index.md      ← SUMMARY comentado (leia aqui!)
-    ├── evals/                   ← Evaluations (UX, visual, GUI)
-    └── screenshots/             ← 11 capturas dos sites
+├── README.md                      ← Você está aqui
+├── INDEX.md                       ← Navegação da base de conhecimento
+├── guidelines.md                  ← Guia visual (fundo branco, cores, tipografia) [TO-DO]
+└── benchmarks/                    ← Análises comparativas consolidadas
+    ├── INDEX.md                   ← Navegação de benchmarks
+    └── 10-05-2026 - Design Referências Audiovisual/
+        ├── benchmark.md           ← Consolidação de 4 evals (completa, sem sumarização)
+        └── screenshots/           ← 11 capturas de sites analisados
 ```
 
 ---
@@ -23,17 +23,23 @@ design/
 ## 🚀 Comece Por Aqui
 
 ### Para Designers/PD
-1. Leia **[`benchmark/references-index.md`](benchmark/references-index.md)**
-2. Abra **[`benchmark/screenshots/`](benchmark/screenshots/)** para referência rápida
+1. Leia **[`benchmarks/10-05-2026 - Design Referências Audiovisual/benchmark.md`](benchmarks/10-05-2026%20-%20Design%20Referências%20Audiovisual/benchmark.md)** — Consolidação completa
+   - Eval 1: UX & Conversão (Hotmart, Domestika, Futura.school)
+   - Eval 2: Visual Design & Credibilidade (Somos Film, Cinematica, Retina, Lab Cine)
+   - Eval 3: GUI & Design System (Coursera, Udemy, Skillshare)
+   - Eval 4: Referências Audiovisual (11 sites)
+2. Abra **[`benchmarks/10-05-2026 - Design Referências Audiovisual/screenshots/`](benchmarks/10-05-2026%20-%20Design%20Referências%20Audiovisual/screenshots/)** para referência rápida
 3. Consulte **[`guidelines.md`](guidelines.md)** (quando preenchido)
 
 ### Para Devs
-1. Consulte **[`benchmark/evals/03-gui-padroes/`](benchmark/evals/03-gui-padroes/)** para padrões UI
-2. Use **[`guidelines.md`](guidelines.md)** para tokens (cores, spacing, tipografia)
+1. Consulte **Eval 3: GUI & Padrões** em **[`benchmark.md`](benchmarks/10-05-2026%20-%20Design%20Referências%20Audiovisual/benchmark.md)** para padrões UI e componentes
+2. Use **Consolidação: Recomendações por Contexto** (seção final) para tokens (cores, spacing, tipografia)
+3. Implemente design system conforme Design System Recomendado em Eval 3
 
 ### Para PM
-1. Leia **[`benchmark/evals/01-ux-conversao/`](benchmark/evals/01-ux-conversao/)** para KPIs de conversão
-2. Revise **[`benchmark/evals/02-visual-credibilidade/`](benchmark/evals/02-visual-credibilidade/)** para posicionamento
+1. Leia **Eval 1: UX & Conversão** em **[`benchmark.md`](benchmarks/10-05-2026%20-%20Design%20Referências%20Audiovisual/benchmark.md)** para KPIs de conversão e jornada ≤2 cliques
+2. Revise **Eval 2: Visual Design & Credibilidade** para posicionamento e trust building
+3. Consulte **Consolidação: Recomendações por Contexto** para síntese de recomendações
 
 ---
 
@@ -41,20 +47,40 @@ design/
 
 Antes de começar os wireframes:
 
-- [ ] Ler `benchmark/references-index.md` completo
-- [ ] Alinhamento sobre paleta: fundo branco vs dark mode
-- [ ] Decisão sobre tipografia (sans-serif ou serif)
-- [ ] Definir menu principal (máx 5 itens)
-- [ ] Decidir se site é minimalista (O2 style) ou visual-heavy (Hyperisland style)
+- [ ] Ler **`benchmarks/10-05-2026 - Design Referências Audiovisual/benchmark.md`** completo (ou navegue por seção)
+- [ ] Alinhamento sobre paleta: Verde (#1DBF60) + Laranja (#FF6B35) confirmado
+- [ ] Decisão sobre tipografia: Inter ou Montserrat (sans-serif pura)
+- [ ] Definir menu principal: [Home] [Sobre] [Filmes/Cursos] [Lab] [Contato] (5 itens max)
+- [ ] Decidir site strategy: Branco + Minimal (O2 style) vs Branco + Visual (Hyperisland/Vulcana style)
+- [ ] Validar jornada de conversão: Home → Lab → Inscrição (≤2 cliques)
 
 ---
 
 ## 🎨 Princípios de Design Atama
 
-✅ **Fundo branco** é identidade central  
+✅ **Fundo branco** é identidade central (padrão audiovisual)  
+✅ **Accent vibrante** (verde ou laranja) diferencia marca  
 ✅ **Minimalista, mas visual** — não deixar vazio  
+✅ **CTA em linha cheia** — ~60px altura, 100% width em mobile  
+✅ **Portfolio em destaque** — credibilidade > stock photos  
 ❌ **Motion design é V2+** — zero parallax/transições no V1  
-❌ **Dark mode é V2+** — manter V1 simples  
+❌ **Dark mode é V2+** — manter V1 simples e branco  
+❌ **Múltiplas tipografias** — máximo 2 families (Inter + maybe serif em V2)  
+
+---
+
+## 📚 Conteúdo Consolidado
+
+**Benchmark 10-05-2026** consolida:
+
+| Eval | Sites Analisados | Foco |
+|------|------------------|------|
+| **UX & Conversão** | Hotmart, Domestika, Futura.school | Navegação, jornada crítica, CTA patterns, Nielsen |
+| **Visual Design & Credibilidade** | Somos Film, Cinematica, Retina, Lab Cine | Cores, tipografia, imagery, trust building |
+| **GUI & Padrões** | Coursera, Udemy, Skillshare | Componentes, layout, responsividade, accessibility |
+| **Referências Audiovisual** | A24, Hyperisland, Vulcana, Barco, O2, Landia, Saigon, Cimarron, Pure Cinema, Beham, Yutopia | Padrões visuais, análise de relevância |
+
+**Toda organizada por contexto:** Site Atama Filmes, Atama Lab, Ambos
 
 ---
 
