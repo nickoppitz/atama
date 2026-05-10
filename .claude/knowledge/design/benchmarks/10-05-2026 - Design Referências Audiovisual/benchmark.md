@@ -886,20 +886,28 @@ Desktop: 1024px+
 - **Padrões:** Dark mode, grandes imagens, transições suaves, menu limpo
 - **Risco:** Pode ser over-engineered para MVP. A24 tem budget ilimitado.
 
+![A24 Films](./screenshots/a24films.png)
+
 **2. Hyperisland** — Brasil/Global | Escola Digital Criativa
 - **Por quê:** Melhor referência para Atama Lab. Site de escola, conversão de alunos, navegação funcional.
 - **Padrões:** Fundo branco com imagens, call-to-action claro, "Para Empresas" + "Cursos", comunidade em destaque
 - **Aprendizado:** Menu categorizado por público (empresas vs alunos)
+
+![Hyperisland](./screenshots/hyperisland.png)
 
 **3. Vulcana Cinema** — Porto Alegre, RS | Produtora Audiovisual Autoral
 - **Por quê:** Produtor local RS, mesma região que Atama. Site minimalista, hero com frame do filme, imagens cinéticas.
 - **Padrões:** Fundo branco + imagem, menu topo (Longas, Curtas, TV, Projetos, Sobre), contato/redes sociais
 - **Aprendizado:** Menu simples, portfolio visual primeiro, contato secundário
 
+![Vulcana Cinema](./screenshots/vulcanacinema.png)
+
 **4. Barco** — Brasil | Escola Audiovisual
 - **Por quê:** Referência para Lab. Cursos ao vivo + gravados, estrutura de conteúdo, dark mode com imagens
 - **Padrões:** Fundo marrom escuro, navegação (Institucional, Cursos, "Sou aluno"), search, call-to-action "Saiba Mais"
 - **Aprendizado:** Segmentar "Cursos ao vivo" vs "Gravados", área "Sou aluno" para portal
+
+![Barco](./screenshots/barco.png)
 
 #### 🟡 ALTA RELEVÂNCIA — Padrões Úteis
 
@@ -908,15 +916,21 @@ Desktop: 1024px+
 - **Padrões:** Fundo branco PURO, apenas texto, menu topo, projetos em scroll horizontal com hover
 - **Risco:** Pode parecer vazio demais. Atama precisa de imagens.
 
+![O2 Filmes](./screenshots/o2filmes.png)
+
 **6. Landia** — São Paulo | Produtora Publicidade Premium
 - **Por quê:** Fundo escuro elegante, branding forte, direcionado a clientes premium
 - **Padrões:** Dark mode, logo prominent, menu burger, sem muita navegação visual
 - **Aprendizado:** Dark mode é viável e elegant
 
+![Landia](./screenshots/landia.png)
+
 **7. Saigon** — Brasil | Produtora Publicidade
 - **Por quê:** Minimalista dark, branding forte
 - **Padrões:** Fundo preto, logo em svg, menu principal limpo, multilíngue (PT/EN/ES)
 - **Aprendizado:** Internacionalização possível em V2
+
+![Saigon](./screenshots/saigon.png)
 
 #### 🟢 MÉDIA RELEVÂNCIA — Context Regional/Latam
 
@@ -925,20 +939,28 @@ Desktop: 1024px+
 - **Padrões:** Fundo azul escuro, logo em branco, menu topo, navegação clara
 - **Status:** Bom exemplo corporativo
 
+![Cimarron Cine](./screenshots/cimarroncine.png)
+
 **9. Pure Cinema** — USA | Produtora Vídeo Criativa
 - **Por quê:** Design minimalista + funcional
 - **Padrões:** Fundo cinza claro, detalhe em amarelo, menu burger, branding grande
 - **Aprendizado:** Uso de cor secundária para destaque
+
+![Pure Cinema](./screenshots/purecinema.png)
 
 **10. Beham Films** — Alemanha | Produtora Cinema Europeia
 - **Por quê:** Produtora europeia, cinema autoral
 - **Padrões:** Fundo azul muito escuro (quase invisível), branding mínimo, navegação muito limpa
 - **Status:** Extremamente minimalista
 
+![Beham Films](./screenshots/behamfilms.png)
+
 **11. Yutopia Films** — Europa | Produtora Cinema Autoral Independente
 - **Por quê:** Produtor europeu autoral, design editorial sofisticado
 - **Padrões:** Fundo creme/bege claro, tipografia serif clássica, layout editorial (grid de projetos com cores), logo ilustrado
 - **Aprendizado:** Tipografia + design editorial funciona bem para produtoras autorais
+
+![Yutopia Films](./screenshots/yutopiafilms.png)
 
 ### Padrões Visuais Recorrentes
 
