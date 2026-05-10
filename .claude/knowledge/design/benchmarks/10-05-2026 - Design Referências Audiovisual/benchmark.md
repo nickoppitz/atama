@@ -193,6 +193,22 @@
 3. **Retina** (https://www.retina.art.br) — Estúdio de produção audiovisual + design
 4. **Laboratório Cinematográfico** (https://laboratoriocinematografico.com) — Escola + produtora de conteúdo audiovisual
 
+### Screenshots de Referência
+
+**Somos Film** — Branco com Accent pink/roxo
+![Somos Film](./screenshots/somosfilm.png)
+
+**Cinematica** — Cinza escuro com texto branco
+![Cinematica](./screenshots/cinematica.png)
+
+**Retina** — Branco com Accent amarelo/dourado
+![Retina](./screenshots/retina.png)
+
+**Laboratório Cinematográfico** — Branco com Accent azul/ciano
+![Lab Cinematográfico](./screenshots/laboratoriocinematografico.png)
+
+---
+
 ### Achados: Paleta de Cores
 
 | Site | Fundo | Primária | Accent | Tipografia |
