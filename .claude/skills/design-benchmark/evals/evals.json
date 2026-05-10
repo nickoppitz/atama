@@ -1,0 +1,26 @@
+{
+  "skill_name": "design-benchmark",
+  "evals": [
+    {
+      "id": 1,
+      "eval_name": "benchmark-ux-conversao",
+      "prompt": "PD: Preciso validar se a jornada site → Lab → inscrição funciona em ≤2 cliques (nossa meta de conversão). Faça benchmark de UX + navegação dessas 3 produtoras: https://www.hotmart.com/pt-BR (plataforma de cursos referência), https://www.domestika.org (comunidade criativa), https://www.futura.school/ (escola de audiovisual). Contexto: Estamos redesenhando a navegação do Atama (home branco + minimalista) e precisamos validar padrões de CTAs, fluxos claros, clickthrough rate. Me diz: quantos cliques pra atingir inscrição, quais padrões de CTA funcionam, qual recomendação pra Atama conseguir ≤2 cliques.",
+      "expected_output": "Report estruturado com: 1) Contagem de cliques por site, 2) Padrões de CTA (posição, cor, copy), 3) Clareza da navegação, 4) Recomendações visuais/UX específicas pro Atama (como estruturar hero + CTA, nav simplificada, etc)",
+      "files": []
+    },
+    {
+      "id": 2,
+      "eval_name": "benchmark-visual-credibilidade",
+      "prompt": "PD: Qual visual language as produtoras audiovisuais referência usam pra construir credibilidade? Analisa esses 4 sites: https://www.somosfilm.com.br, https://www.cinematica.com.br, https://www.retina.art.br, https://laboratoriocinematografico.com. Observa: cores primárias, tipografia, imagery (fotos vs vídeos vs ilustrações), elementos de confiança (team, prêmios, portfolio, testimonials). Estou projetando o Atama como minimalista + branco + moderno. Recomenda: qual paleta de cores (fundo branco, accent color), qual tipografia (sans-serif moderna?), qual estilo de imagery (vídeos de filmes reais?), quais elementos de credibilidade incluir na home.",
+      "expected_output": "Report com análise visual por site (cores, fontes, estilo), padrões identificados, recomendações Atama específicas (paleta, tipografia, imagery, elementos de trust) com justificativa",
+      "files": []
+    },
+    {
+      "id": 3,
+      "eval_name": "benchmark-gui-padroes",
+      "prompt": "PD: Preciso mapear componentes e padrões que as plataformas de cursos boas usam. Benchmark: https://www.coursera.org, https://www.udemy.com, https://www.skillshare.com (focar nas páginas de landing de cursos, checkout). Observa: quais componentes aparecem (cards, buttons, badges, forms, modals), qual paleta de cores, como estruturam a informação (hierarquia), como funcionam os CTAs (cor, posição, copy). Contexto: vou criar um design system limpo pra Atama Lab (sem motion design ainda). Me recomenda: quais componentes base (buttons, cards, inputs, modals), qual sistema de cores (Atama = branco + accent), qual tipografia, como estruturar cards de cursos.",
+      "expected_output": "Report com: 1) Componentes mapeados (buttons, cards, forms, etc), 2) Padrões de hierarquia visual, 3) Sistema de cores usado, 4) Recomendações de design system pra Atama (componentes base, tipografia, colors, spacing)",
+      "files": []
+    }
+  ]
+}
