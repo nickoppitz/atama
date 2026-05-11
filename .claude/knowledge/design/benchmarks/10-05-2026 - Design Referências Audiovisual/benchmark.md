@@ -642,7 +642,7 @@ Desktop: 1024px+
 - **Padrões:** Fundo marrom escuro, navegação (Institucional, Cursos, "Sou aluno"), search, call-to-action "Saiba Mais"
 - **Aprendizado:** Segmentar "Cursos ao vivo" vs "Gravados", área "Sou aluno" para portal
 
-![Barco](./screenshots/barco.png)
+![Barco](./screenshots/barco.jpg)
 
 #### 🟡 ALTA RELEVÂNCIA — Padrões Úteis
 
