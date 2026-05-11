@@ -2,17 +2,16 @@
 ## Design Referências Audiovisual
 
 **Data:** 2026-05-10  
-**Objetivo Consolidado:** Análise visual, UX, componentes e padrões para Site Atama Filmes e Atama Lab. Consolidação de 4 evals (UX & Conversão, Visual Design & Credibilidade, GUI & Padrões, Referências Audiovisual).
+**Objetivo Consolidado:** Análise visual, UX, componentes e padrões para Site Atama Filmes e Atama Lab. Consolidação de 3 evals (UX & Conversão, GUI & Padrões, Referências Audiovisual).
 
 ---
 
 ## Índice
 
 1. [Eval 1: UX & Conversão (≤2 Cliques)](#eval-1-ux--conversão-2-cliques)
-2. [Eval 2: Visual Design & Credibilidade](#eval-2-visual-design--credibilidade)
-3. [Eval 3: GUI & Padrões (Design System)](#eval-3-gui--padrões-design-system)
-4. [Eval 4: Referências Audiovisual (11 Sites)](#eval-4-referências-audiovisual-11-sites)
-5. [Consolidação: Recomendações por Contexto](#consolidação-recomendações-por-contexto)
+2. [Eval 3: GUI & Padrões (Design System)](#eval-3-gui--padrões-design-system)
+3. [Eval 4: Referências Audiovisual (9 Sites)](#eval-4-referências-audiovisual-9-sites)
+4. [Consolidação: Recomendações por Contexto](#consolidação-recomendações-por-contexto)
 
 ---
 
@@ -27,7 +26,6 @@
 
 1. **Hotmart** (https://www.hotmart.com/pt-BR) — Plataforma de cursos online referência no Brasil, marketplace de produtos digitais
 2. **Domestika** (https://www.domestika.org) — Comunidade criativa com cursos, foco em artes e design
-3. **Futura.school** (https://www.futura.school/) — Escola de audiovisual + cursos, contexto similar ao Atama *(domínio expirado em 2026)*
 
 ### Screenshots de Referência
 
@@ -35,7 +33,6 @@
 
 ![Domestika](./screenshots/domestika.png)
 
-![Futura.school](./screenshots/futura-school.png)
 
 ---
 
@@ -45,9 +42,8 @@
 |------|---|---|---|
 | **Hotmart** | Home → Categorias → Cursos → Compra | 4 níveis | ⭐⭐⭐ Claro |
 | **Domestika** | Home → Explorar → Cursos → Compra | 4 níveis | ⭐⭐⭐ Claro |
-| **Futura.school** | Home → Cursos → Detalhes → Inscrição | 3 níveis | ⭐⭐⭐⭐ Muito claro |
 
-**Achado:** Futura.school usa apenas 3 níveis (mais próximo do nosso ≤2 cliques target). Hotmart e Domestika têm categorização extra.
+**Achado:** Hotmart e Domestika têm categorização extra (4 níveis). Menos níveis = menos fricção para o usuário.
 
 #### Para Site Atama Filmes
 - Menu simples: Home | Lab | Filmes | Sobre | Contato (5 itens max)
@@ -60,7 +56,7 @@
 - Padrão: Menu minimalista reduz distração
 
 #### Para Ambos
-- Padrão validado: Futura.school (3 níveis) é superior a Hotmart (4 níveis)
+- Padrão validado: menos níveis = menos fricção
 - Menu estruturado reduz fricção de navegação
 
 ### Achados: Jornada Crítica (Home → CTA Principal)
@@ -78,13 +74,7 @@
 - **Cliques:** Home → Página curso → "Assistir agora" = **2-3 cliques** ⚠️
 - **Copy do CTA:** "Acessar curso" → "Assistir agora"
 
-**Futura.school**
-- Home tem seção "Cursos populares" com cards grandes
-- CTA "Fazer inscrição" bem destacado (verde)
-- **Cliques:** Home → "Fazer inscrição" no card = **1 clique** ✅
-- **Copy do CTA:** "Fazer inscrição" (ação clara)
-
-**Conclusão:** Futura.school atinge ≤1 clique. Hotmart atinge 2 cliques. Domestika passa 2 cliques.
+**Conclusão:** Hotmart atinge 2 cliques. Domestika passa 2 cliques.
 
 #### Para Site Atama Filmes
 - CTA em linha cheia, grande (não em hover)
@@ -92,7 +82,7 @@
 
 #### Para Atama Lab
 - CTA "Fazer inscrição" ou "Inscrever-se" em destaque (não genérico "Comprar")
-- Seguir padrão Futura.school: CTA linha cheia, grande, prominent
+- CTA linha cheia, grande, prominent
 
 #### Para Ambos
 - Home → Lab: **1 clique** via CTA em hero
@@ -106,21 +96,18 @@
 |------|---|---|
 | Hotmart | Verde (#1DBF60) | Alto ✅ |
 | Domestika | Roxo (#6E46AC) | Alto ✅ |
-| Futura.school | Verde (#00AA44) | Alto ✅ |
 
 **Padrão:** Todas usam cores vibrantes (verde é mais comum). Branco raramente é usado como cor de CTA.
 
 #### Posição & Tamanho
 - **Hotmart:** CTA em hover nos cards (small, ~40px)
 - **Domestika:** CTA integrado ao card (medium, ~50px)
-- **Futura.school:** CTA destacado abaixo do card (large, ~60px, linha cheia)
 
 **Padrão:** CTA em "linha cheia" (full-width ou grande) converte melhor que CTAs pequenas/hover.
 
 #### Copy
 - Hotmart: "Comprar", "Comprar agora" (direto)
 - Domestika: "Acessar", "Assistir agora" (ação)
-- Futura.school: "Fazer inscrição", "Inscrever-se" (ação + propósito)
 
 **Padrão:** Copy com verbo + contexto ("Fazer inscrição") converte mais que genérico ("Comprar").
 
@@ -131,7 +118,7 @@
 
 #### Para Atama Lab
 - Cor: Verde (padrão plataformas de cursos)
-- Tamanho: ~60px altura (línea cheia, mesmo que Futura.school)
+- Tamanho: ~60px altura (línea cheia)
 - Copy: "Fazer inscrição" ou "Inscrever-se" (ação + contexto, não "Comprar")
 
 #### Para Ambos
@@ -143,9 +130,8 @@
 
 - **Hotmart:** Menu hamburger, cards em grid responsivo, CTA fica pequena em mobile
 - **Domestika:** Menu hamburger, grid adapta, CTA visível
-- **Futura.school:** Menu hamburger, cards grandes em mobile, CTA prominent
 
-**Achado:** Futura.school mantém CTA grande e visível em mobile. Hotmart diminui CTAs em mobile → menos conversão.
+**Achado:** Hotmart diminui CTAs em mobile → menos conversão que Domestika.
 
 #### Para Ambos
 - CTA deve permanecer grande e visível em mobile
@@ -154,16 +140,16 @@
 
 ### Achados: Clareza & UX Honeycomb
 
-| Aspecto | Hotmart | Domestika | Futura.school |
-|---------|---------|-----------|---|
-| **Usabilidade** | ⭐⭐⭐ | ⭐⭐⭐ | ⭐⭐⭐⭐ |
-| **Clareza (confiança)** | ⭐⭐⭐ | ⭐⭐⭐ | ⭐⭐⭐⭐ |
-| **Eficiência (cliques)** | ⭐⭐⭐ | ⭐⭐ | ⭐⭐⭐⭐ |
-| **Desejabilidade** | ⭐⭐⭐ | ⭐⭐⭐⭐ | ⭐⭐⭐ |
+| Aspecto | Hotmart | Domestika |
+|---------|---------|----------|
+| **Usabilidade** | ⭐⭐⭐ | ⭐⭐⭐ |
+| **Clareza (confiança)** | ⭐⭐⭐ | ⭐⭐⭐ |
+| **Eficiência (cliques)** | ⭐⭐⭐ | ⭐⭐ |
+| **Desejabilidade** | ⭐⭐⭐ | ⭐⭐⭐⭐ |
 
 ### Padrões Identificados (Eval 1)
 
-1. **CTA em linha cheia (full-width) converte mais que CTAs pequenas/hover** (Visto em Futura.school, não em Hotmart/Domestika)
+1. **CTA em linha cheia (full-width) converte mais que CTAs pequenas/hover**
 2. **Copy com verbo + contexto é mais claro que genérico** ("Fazer inscrição" > "Comprar", "Inscrever-se" > "Acessar")
 3. **Menu minimalista (5-6 itens) vs menu com 10+ itens** (Futura: 5 itens, Hotmart: complexo)
 4. **Verde é a cor dominante para CTAs em plataformas de cursos** (2 de 3 sites)
@@ -172,291 +158,20 @@
 
 ### Nielsen's Heuristics — Avaliação
 
-| Heurística | Hotmart | Domestika | Futura.school | Recomendação Atama |
+| Heurística | Hotmart | Domestika | Recomendação Atama |
 |-----------|---------|-----------|---|---|
-| 1. Visibilidade do sistema | ✅ | ✅ | ✅✅ | Feedback claro em CTAs, form validação |
-| 2. Match com realidade | ✅ | ✅ | ✅✅ | Copy direto ("Inscrição", não "Adquirir produto") |
-| 3. Controle & liberdade | ✅ | ✅ | ✅ | Fácil voltar da inscrição, sem traps |
-| 4. Consistência | ✅ | ✅ | ✅✅ | Menu + CTA + cores consistentes |
-| 5. Prevenção de erros | ⚠️ | ✅ | ✅ | Validação em forms (CPF, email) |
-| 6. Reconhecimento vs recall | ✅ | ✅ | ✅ | Setas, breadcrumbs, visual hierarchy |
-| 7. Flexibilidade | ⚠️ | ⚠️ | ✅ | Atalhos claros (TikTok link direto → /lab) |
-| 8. Design estético | ✅ | ✅✅ | ✅ | Espaço branco, sem clutter (Atama + minimalista) |
-| 9. Mensagens de erro | ✅ | ✅ | ✅ | Mensagens claras em validações |
-| 10. Help & docs | ⚠️ | ✅ | ✅✅ | FAQ visível na página Lab |
+| 1. Visibilidade do sistema | ✅ | ✅ | Feedback claro em CTAs, form validação |
+| 2. Match com realidade | ✅ | ✅ | Copy direto ("Inscrição", não "Adquirir produto") |
+| 3. Controle & liberdade | ✅ | ✅ | Fácil voltar da inscrição, sem traps |
+| 4. Consistência | ✅ | ✅ | Menu + CTA + cores consistentes |
+| 5. Prevenção de erros | ⚠️ | ✅ | Validação em forms (CPF, email) |
+| 6. Reconhecimento vs recall | ✅ | ✅ | Setas, breadcrumbs, visual hierarchy |
+| 7. Flexibilidade | ⚠️ | ⚠️ | Atalhos claros (TikTok link direto → /lab) |
+| 8. Design estético | ✅ | ✅✅ | Espaço branco, sem clutter (Atama + minimalista) |
+| 9. Mensagens de erro | ✅ | ✅ | Mensagens claras em validações |
+| 10. Help & docs | ⚠️ | ✅ | FAQ visível na página Lab |
 
 **Crítico para Atama:** Heurísticas 1, 2, 4, 8 (visibilidade, match, consistência, estética).
-
----
-
-## Eval 2: Visual Design & Credibilidade
-
-**Objetivo:** Entender qual visual language as produtoras audiovisuais referência usam pra construir credibilidade. Extrair paleta de cores, tipografia, estilo de imagery e elementos de trust.
-
-**Tipo de Benchmark:** Visual Design + Credibilidade  
-**Data:** 2026-05-10
-
-### Sites Analisados
-
-1. **Somos Film** (https://www.somosfilm.com.br) — Produtora com foco em publicidade e conteúdo
-2. **Cinematica** (https://www.cinematica.com.br) — Produtora de documentários e narrativas
-3. **Retina** (https://www.retina.art.br) — Estúdio de produção audiovisual + design
-4. **Laboratório Cinematográfico** (https://laboratoriocinematografico.com) — Escola + produtora de conteúdo audiovisual
-
-### Screenshots de Referência
-
-**Somos Film** — Branco com Accent pink/roxo
-![Somos Film](./screenshots/somosfilm.png)
-
-**Cinematica** — Cinza escuro com texto branco
-![Cinematica](./screenshots/cinematica.png)
-
-**Retina** — Branco com Accent amarelo/dourado
-![Retina](./screenshots/retina.png)
-
-**Laboratório Cinematográfico** — Branco com Accent azul/ciano
-![Lab Cinematográfico](./screenshots/laboratoriocinematografico.png)
-
----
-
-### Achados: Paleta de Cores
-
-| Site | Fundo | Primária | Accent | Tipografia |
-|------|-------|----------|--------|-----------|
-| **Somos Film** | Branco | Preto/Cinza | Neon pink/roxo | Moderno |
-| **Cinematica** | Cinza escuro | Branco | Verde | Minimalista |
-| **Retina** | Branco | Preto | Amarelo/Dourado | Bold |
-| **Lab Cinematográfico** | Branco | Preto | Azul/Ciano | Moderno |
-
-**Padrão 1: Fundo Branco é dominante (3 de 4 sites)**
-- Transmite: modernidade, minimalismo, limpeza
-- Facilita destaque de imagens/vídeos
-
-**Padrão 2: Accent Colors vibrantes**
-- Somos Film: Neon pink/roxo (criativa, jovem)
-- Cinematica: Verde escuro (confiança, natureza)
-- Retina: Amarelo/dourado (criatividade, luxo)
-- Lab Cine: Azul/ciano (tech-forward, moderno)
-
-**Padrão 3: Texto sempre em preto ou branco** (sem cinzas intermediários)
-- Aumenta legibilidade
-- Contraste ≥ 7:1 (AAA)
-
-#### Para Site Atama Filmes
-- Fundo: Branco puro (padrão em produtoras)
-- Accent: Verde, Laranja, ou Roxo (vibrante, criativo)
-- Texto: Preto (legibilidade máxima)
-
-#### Para Atama Lab
-- Fundo: Branco com destaque em seções (similar a Hyperisland e Barco)
-- Accent: Verde (padrão educação, confiança)
-- Texto: Preto para primário, cinza para secundário
-
-#### Para Ambos
-- Fundo branco é obrigatório (padrão audiovisual)
-- Accent color vibrante diferencia a marca
-- Contraste ≥4.5:1 (WCAG AA mínimo)
-
-### Achados: Tipografia
-
-#### Famílias Usadas
-
-| Site | Display/Headlines | Body | Padrão |
-|------|---|---|---|
-| **Somos Film** | Montserrat Bold (sans) | Montserrat Regular (sans) | Tudo sans-serif |
-| **Cinematica** | Poppins Bold (sans) | Poppins Regular (sans) | Tudo sans-serif |
-| **Retina** | Playfair Display (serif) | Lato (sans) | Serif + sans hybrid |
-| **Lab Cine** | Inter Bold (sans) | Inter Regular (sans) | Tudo sans-serif |
-
-**Padrão 1: Sans-serif moderna é padrão em 3 de 4**
-- Montserrat, Poppins, Inter (todas geométricas)
-- Comunica: moderno, tech-forward, acessível
-
-**Padrão 2: Retina usa serif (Playfair) como diferencial**
-- Pairing: Playfair (headlines) + Lato (body)
-- Efeito: elegância + modernidade
-- Menos comum em produtoras audiovisuais
-
-**Recomendação para Atama:** Sans-serif pura (Inter, Montserrat, Poppins) é mais alinhada com mercado.
-
-#### Para Ambos
-- Font: Inter ou Montserrat (sans-serif pura, moderna, geométrica)
-- Headings: Bold (700), 48-64px (hero), 32-40px (seção), 24-28px (subsection)
-- Body: Regular (400), 16-18px
-- Máximo 2 famílias tipográficas
-
-### Achados: Imagery & Estilo Visual
-
-#### Fotos vs Vídeos vs Ilustrações
-
-| Site | Hero | Cards | Backgrounds |
-|------|------|-------|-------------|
-| **Somos Film** | Vídeo (autoplay) | Fotos de projetos (reais) | Cinza + gradientes suaves |
-| **Cinematica** | Foto estática grande | Mix: fotos + stills de vídeos | Cinza escuro + overlays |
-| **Retina** | Vídeo (autoplay, muted) | Fotos coloridas + retratos | Branco + overlays cor |
-| **Lab Cine** | Foto estática + texto overlay | Fotos/stills de cursos | Branco + cor accent |
-
-**Padrão 1: Vídeo autoplay em hero é tendência**
-- Somos Film + Retina usam vídeo
-- Cinematica usa foto (mais performance)
-- Efeito: impacto visual maior, mostra movimento da marca
-
-**Padrão 2: Fotos de projetos reais, não stock**
-- Nenhum dos 4 usa stock photos genéricas
-- Todas mostram trabalhos reais da produtora
-- Transmite: credibilidade, portfólio, expertise
-
-**Padrão 3: Overlays de cor são comuns**
-- Semi-transparentes (70-80% opacidade)
-- Melhoram legibilidade de texto sobre foto
-- Reforçam brand color
-
-#### Estilo Fotográfico
-- **Somos Film:** Cores vibrantes, contraste alto, dinâmico
-- **Cinematica:** Tons naturais, cinzático, minimalista
-- **Retina:** Cores saturadas, colorido, bold
-- **Lab Cine:** Cores naturais + touches de cor, limpo
-
-**Conclusion:** Não há estilo único. Varia conforme identidade da produtora.
-
-#### Para Site Atama Filmes
-- Hero: Vídeo curto (5-10s) dos filmes de Atama (Beyond Us, série) com overlay de cor (verde ou laranja 70% opacidade) + texto branco
-- Portfolio: Stills/screenshots dos filmes reais
-- Imagery: Fotos reais de Atama body of work (não stock photos)
-
-#### Para Atama Lab
-- Hero: Foto estática grande (Beyond Us ou série) com overlay + texto
-- Cards de cursos: Fotos/stills de aulas ou espaço (Casa da Chácara)
-- Backgrounds: Branco + cor accent em seções
-
-#### Para Ambos
-- Video em hero é impactante mas requer otimização
-- Se performance é crítica, usar foto estática grande (menos 300KB)
-- Sempre usar conteúdo real de Atama, não stock
-
-### Achados: Espaçamento & Hierarquia
-
-#### Padding/Margins
-- **Padrão:** Espaço generoso entre seções
-- Hotmart padding: ~60-80px (desktop)
-- Mobile: ~40-60px
-- Cards internas: padding ~24-32px
-
-#### Hierarchy de Tamanhos
-| Elemento | Size (Desktop) | Tamanho Relativo |
-|----------|---|---|
-| H1 (Hero) | 48-64px | 4x |
-| H2 (Section) | 32-40px | 2.5x |
-| H3 (Subsection) | 24-28px | 2x |
-| Body | 16-18px | 1x |
-| Small | 12-14px | 0.8x |
-
-**Padrão:** Razão de escala ~1.5x entre níveis (harmônico).
-
-#### Whitespace (Espaço em Branco)
-- Somos Film: Moderado (60% conteúdo, 40% espaço)
-- Cinematica: Generoso (50% conteúdo, 50% espaço)
-- Retina: Moderado (60% conteúdo, 40% espaço)
-- Lab Cine: Generoso (45% conteúdo, 55% espaço)
-
-**Padrão:** Espaço em branco é marca de minimalismo/luxo.
-
-#### Para Ambos
-- Espaço generoso (50%+ espaço) — alinha com identidade branca + minimalista
-- Padding: 60-80px desktop, 40-60px tablet, 16-40px mobile
-- Escala hierárquica 1.5x entre elementos
-
-### Achados: Elementos de Credibilidade (Trust Building)
-
-| Elemento | Somos | Cine | Retina | Lab |
-|----------|-------|------|--------|-----|
-| **Portfolio** | ✅ Videos de trabalhos | ✅ Documentários | ✅ Projetos com stills | ✅ Cursos |
-| **Team** | ⚠️ Não visível | ✅ Bios dos diretores | ✅ Fotos + bios | ✅ Foto team |
-| **Prêmios** | ✅ Destaque em hero | ✅ Mencionados | ✅ Alguns mencionados | ⚠️ Não destacado |
-| **Testimonials** | ❌ Não visto | ❌ Não visto | ✅ Quotes de clientes | ✅ Depoimentos alunos |
-| **Números (Social Proof)** | ⚠️ Não visual | ⚠️ Não visual | ✅ "+500 clientes" | ✅ "+200 alunos" |
-| **Case Studies** | ✅ Por projeto | ⚠️ Descrições curtas | ✅ Páginas dedicadas | ✅ Stories de alunos |
-| **Processo/Metodologia** | ⚠️ Implícito | ⚠️ Implícito | ✅ Explicado | ✅ Syllabus visível |
-
-**Padrão 1: Portfolio é essencial**
-- Todos os 4 mostram trabalhos (vídeos, projetos, cursos)
-- Ordem de prioridade: Portfolio > Team > Prêmios > Testimonials
-
-**Padrão 2: Team humaniza a marca**
-- Quando mostrado (Cinematica, Retina, Lab), aumenta confiança
-- Fotos reais + bios, não avatares
-- Posição: geralmente após portfolio
-
-**Padrão 3: Social proof é poderoso**
-- Números: "+500 clientes", "+200 alunos"
-- Testimonials (quotes curtos)
-- Prêmios/reconhecimentos
-- **Recomendação:** Atama deveria destacar "Alunos inscritos", "Filmes produzidos", "Prêmios ganhos"
-
-**Padrão 4: Transparency sobre processo**
-- Retina + Lab explicam metodologia
-- Reduz fricção na decisão de compra
-- **Recomendação:** Syllabus do Curso Carro-Chefe deveria estar visible em `/lab`
-
-#### Para Site Atama Filmes
-- Portfolio: Página `/filmes` com grid de projetos
-- Cada projeto: thumbnail + title + awards (se tiver)
-- Team seção: Fotos reais de Rogério + Rose + maybe Marcelo, Amanda
-- Prêmios/reconhecimentos em destaque
-
-#### Para Atama Lab
-- Portfolio: Cursos listados com descrição detalhada
-- Team: Fotos dos professores/instrutores
-- Social proof: "+X alunos inscritos"
-- Syllabus: Completo e visível
-- Testimonials: Depoimentos de alunos (se tiver)
-
-#### Para Ambos
-- Fotos reais (não avatares)
-- Trust building: Portfolio > Team > Prêmios > Testimonials
-- Transparência: Explicar processo/metodologia
-
-### Padrões Identificados (Eval 2)
-
-1. **Fundo branco** = padrão absoluto em produtoras audiovisuais
-2. **Accent color vibrante** = diferenciador (verde, rosa, amarelo, azul)
-3. **Sans-serif moderna** = Montserrat, Poppins, Inter, Roboto
-4. **Espaço em branco generoso** = sinal de qualidade/minimalismo
-5. **Fotos reais de projetos** = credibilidade > stock photos
-
-### Design System Recomendado (Eval 2)
-
-#### Colors (Palette)
-```
-Neutral:
-- White: #FFFFFF (backgrounds)
-- Black: #000000 (text)
-- Gray: #F5F5F5, #E8E8E8, #CCCCCC (backgrounds light, borders)
-
-Primary Accent:
-- Green: #1DBF60 (CTA principal, highlights Lab)
-- Orange: #FF6B35 (secondary, portfolio highlights)
-
-Backgrounds:
-- White: #FFFFFF
-- Light Gray: #F9F9F9 (alternating sections)
-
-Text:
-- Black: #000000 (primary text)
-- Dark Gray: #333333 (secondary text, lighter than black)
-```
-
-#### Typography (Inter family)
-- Regular 400
-- Medium 500
-- Semibold 600
-- Bold 700
-
-#### Components
-- Buttons: Green primary (hover: #159947), outline secondary
-- Cards: White + subtle shadow (0 4px 12px rgba(0,0,0,0.08))
-- Inputs: Minimal (border bottom only), 2px underline on focus
-- Spacing: 8px grid (8, 16, 24, 32, 40, 48, 56, 64px)
 
 ---
 
@@ -890,7 +605,7 @@ Desktop: 1024px+
 
 ---
 
-## Eval 4: Referências Audiovisual (11 Sites)
+## Eval 4: Referências Audiovisual (9 Sites)
 
 **Data:** 2026-05-10  
 **Objetivo:** Análise visual e UX de produtoras/plataformas de referência para Atama Filmes + Lab
@@ -945,37 +660,23 @@ Desktop: 1024px+
 
 ![Landia](./screenshots/landia.png)
 
-**7. Saigon** — Brasil | Produtora Publicidade
-- **Por quê:** Minimalista dark, branding forte
-- **Padrões:** Fundo preto, logo em svg, menu principal limpo, multilíngue (PT/EN/ES)
-- **Aprendizado:** Internacionalização possível em V2
-
-![Saigon](./screenshots/saigon.png)
-
 #### 🟢 MÉDIA RELEVÂNCIA — Context Regional/Latam
 
-**8. Cimarron Cine** — Latam | Produtora (Mediapro Studio)
+**7. Cimarron Cine** — Latam | Produtora (Mediapro Studio)
 - **Por quê:** Visão Latam, produtora profissional
 - **Padrões:** Fundo azul escuro, logo em branco, menu topo, navegação clara
 - **Status:** Bom exemplo corporativo
 
 ![Cimarron Cine](./screenshots/cimarroncine.png)
 
-**9. Pure Cinema** — USA | Produtora Vídeo Criativa
-- **Por quê:** Design minimalista + funcional
-- **Padrões:** Fundo cinza claro, detalhe em amarelo, menu burger, branding grande
-- **Aprendizado:** Uso de cor secundária para destaque
-
-![Pure Cinema](./screenshots/purecinema.png)
-
-**10. Beham Films** — Alemanha | Produtora Cinema Europeia
+**8. Beham Films** — Alemanha | Produtora Cinema Europeia
 - **Por quê:** Produtora europeia, cinema autoral
 - **Padrões:** Fundo azul muito escuro (quase invisível), branding mínimo, navegação muito limpa
 - **Status:** Extremamente minimalista
 
 ![Beham Films](./screenshots/behamfilms.png)
 
-**11. Yutopia Films** — Europa | Produtora Cinema Autoral Independente
+**9. Yutopia Films** — Europa | Produtora Cinema Autoral Independente
 - **Por quê:** Produtor europeu autoral, design editorial sofisticado
 - **Padrões:** Fundo creme/bege claro, tipografia serif clássica, layout editorial (grid de projetos com cores), logo ilustrado
 - **Aprendizado:** Tipografia + design editorial funciona bem para produtoras autorais
@@ -989,13 +690,13 @@ Desktop: 1024px+
 |--------|-----------|----------|
 | **Fundo Branco Puro** | Alta | O2, Vulcana, Barco (parcial), Hyperisland |
 | **Fundo Branco + Imagens** | Muito Alta | Hyperisland, Vulcana, Yutopia |
-| **Fundo Escuro (Dark Mode)** | Alta | Saigon, Landia, A24, Cimarron, Beham |
-| **Fundo Cor Neutra (Cinza/Creme)** | Média | Pure Cinema, Yutopia |
+| **Fundo Escuro (Dark Mode)** | Alta | Landia, A24, Cimarron, Beham |
+| **Fundo Cor Neutra (Cinza/Creme)** | Média | Yutopia |
 
 #### Tipografia
 | Padrão | Exemplos | Adequação Atama |
 |--------|----------|-----------------|
-| **Sans-serif Bold** (corpo minimalista) | O2, Landia, Saigon, A24 | ✅ Recomendado V1 |
+| **Sans-serif Bold** (corpo minimalista) | O2, Landia, A24 | ✅ Recomendado V1 |
 | **Serif Editorial** (sofisticação) | Yutopia | 🟡 Possível V2 |
 | **Sans-serif Compacta** (eficiência) | Barco, Hyperisland | ✅ Para Lab |
 
@@ -1003,7 +704,7 @@ Desktop: 1024px+
 | Padrão | Exemplos | Aprendizado |
 |--------|----------|-----------|
 | **Menu Topo Horizontal** | Vulcana, Barco, Hyperisland, Cimarron | Padrão web. Atama pode usar. |
-| **Menu Burger (Mobile-first)** | Saigon, Landia, Pure Cinema, Beham | Moderno, poupa espaço |
+| **Menu Burger (Mobile-first)** | Landia, Beham | Moderno, poupa espaço |
 | **Sem Menu Visível** | O2 (mínimo) | Extremo. Não recomendado para Lab. |
 
 #### Hero/Landing
@@ -1035,18 +736,16 @@ Desktop: 1024px+
 
 ### Screenshots Originais
 
-Todos os 11 sites foram capturados em 2026-05-10 e estão em `screenshots/`:
-1. o2filmes.com
-2. vulcanacinema.com
-3. barco.art.br
-4. cimarroncine.com
-5. landia.com/sao-paulo
-6. saigon.com.br
-7. hyperisland.com.br
-8. a24films.com
-9. purecinema.tv
-10. beham-films.de
-11. yutopiafilms.info
+Todos os 9 sites foram capturados em 2026-05-10 e estão em `screenshots/`:
+1. a24films.com
+2. hyperisland.com.br
+3. vulcanacinema.com
+4. barco.art.br
+5. o2filmes.com
+6. landia.com/sao-paulo
+7. cimarroncine.com
+8. beham-films.de
+9. yutopiafilms.info
 
 ---
 

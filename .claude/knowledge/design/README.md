@@ -14,8 +14,8 @@ design/
 └── benchmarks/                    ← Análises comparativas consolidadas
     ├── INDEX.md                   ← Navegação de benchmarks
     └── 10-05-2026 - Design Referências Audiovisual/
-        ├── benchmark.md           ← Consolidação de 4 evals (completa, sem sumarização)
-        └── screenshots/           ← 11 capturas de sites analisados
+        ├── benchmark.md           ← Consolidação de 3 evals (completa, sem sumarização)
+        └── screenshots/           ← 15 capturas de sites analisados
 ```
 
 ---
@@ -24,10 +24,9 @@ design/
 
 ### Para Designers/PD
 1. Leia **[`benchmarks/10-05-2026 - Design Referências Audiovisual/benchmark.md`](benchmarks/10-05-2026%20-%20Design%20Referências%20Audiovisual/benchmark.md)** — Consolidação completa
-   - Eval 1: UX & Conversão (Hotmart, Domestika, Futura.school)
-   - Eval 2: Visual Design & Credibilidade (Somos Film, Cinematica, Retina, Lab Cine)
+   - Eval 1: UX & Conversão (Hotmart, Domestika)
    - Eval 3: GUI & Design System (Coursera, Udemy, Skillshare)
-   - Eval 4: Referências Audiovisual (11 sites)
+   - Eval 4: Referências Audiovisual (9 sites: A24, Hyperisland, Vulcana, Barco, O2, Landia, Cimarron, Beham, Yutopia)
 2. Abra **[`benchmarks/10-05-2026 - Design Referências Audiovisual/screenshots/`](benchmarks/10-05-2026%20-%20Design%20Referências%20Audiovisual/screenshots/)** para referência rápida
 3. Consulte **[`guidelines.md`](guidelines.md)** (quando preenchido)
 
@@ -38,8 +37,7 @@ design/
 
 ### Para PM
 1. Leia **Eval 1: UX & Conversão** em **[`benchmark.md`](benchmarks/10-05-2026%20-%20Design%20Referências%20Audiovisual/benchmark.md)** para KPIs de conversão e jornada ≤2 cliques
-2. Revise **Eval 2: Visual Design & Credibilidade** para posicionamento e trust building
-3. Consulte **Consolidação: Recomendações por Contexto** para síntese de recomendações
+2. Consulte **Consolidação: Recomendações por Contexto** para síntese de recomendações
 
 ---
 
@@ -75,10 +73,9 @@ Antes de começar os wireframes:
 
 | Eval | Sites Analisados | Foco |
 |------|------------------|------|
-| **UX & Conversão** | Hotmart, Domestika, Futura.school | Navegação, jornada crítica, CTA patterns, Nielsen |
-| **Visual Design & Credibilidade** | Somos Film, Cinematica, Retina, Lab Cine | Cores, tipografia, imagery, trust building |
+| **UX & Conversão** | Hotmart, Domestika | Navegação, jornada crítica, CTA patterns, Nielsen |
 | **GUI & Padrões** | Coursera, Udemy, Skillshare | Componentes, layout, responsividade, accessibility |
-| **Referências Audiovisual** | A24, Hyperisland, Vulcana, Barco, O2, Landia, Saigon, Cimarron, Pure Cinema, Beham, Yutopia | Padrões visuais, análise de relevância |
+| **Referências Audiovisual** | A24, Hyperisland, Vulcana, Barco, O2, Landia, Cimarron, Beham, Yutopia | Padrões visuais, análise de relevância |
 
 **Toda organizada por contexto:** Site Atama Filmes, Atama Lab, Ambos
 
