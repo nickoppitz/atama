@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { FestivalBadge, StreamingBadge } from "@/components/project-badges";
 
 export const metadata: Metadata = {
   title: "Projetos — Atama Filmes",
@@ -77,6 +78,22 @@ export default function ProjetosPage() {
             {/* Thumbnail placeholder */}
             <div className="aspect-video bg-[#111] rounded mb-5 overflow-hidden relative">
               <div className="absolute inset-0 bg-[#1a1a1a]" />
+
+              {/* Badge festival — canto superior esquerdo */}
+              {projeto.plataforma === "Festivais internacionais" && (
+                <div className="absolute top-3 left-3 z-10">
+                  <FestivalBadge size={60} />
+                </div>
+              )}
+
+              {/* Badges streaming — canto inferior direito */}
+              {projeto.plataforma === "Amazon Prime · Nick Jr." && (
+                <div className="absolute bottom-2 right-2 z-10 flex gap-1">
+                  <StreamingBadge platform="amazon-prime" />
+                  <StreamingBadge platform="nick-jr" />
+                </div>
+              )}
+
               <div className="absolute bottom-3 left-3">
                 <span className="text-[9px] tracking-[0.18em] text-white/40 uppercase">
                   {projeto.categoria}
@@ -103,9 +120,17 @@ export default function ProjetosPage() {
               {projeto.descricao}
             </p>
 
-            <span className="text-[11px] tracking-[0.08em] text-primary/80 uppercase">
-              {projeto.plataforma}
-            </span>
+            {/* Plataforma */}
+            {projeto.plataforma === "Amazon Prime · Nick Jr." ? (
+              <div className="flex gap-1.5 items-center">
+                <StreamingBadge platform="amazon-prime" />
+                <StreamingBadge platform="nick-jr" />
+              </div>
+            ) : projeto.plataforma !== "Festivais internacionais" ? (
+              <span className="text-[11px] tracking-[0.08em] text-primary/80 uppercase">
+                {projeto.plataforma}
+              </span>
+            ) : null}
           </div>
         ))}
       </div>

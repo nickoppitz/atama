@@ -1,12 +1,13 @@
 "use client";
 
 import Link from "next/link";
-import { usePathname } from "next/navigation";
+import Image from "next/image";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
-import Image from "next/image";
-import { buttonVariants } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import { buttonVariants } from "@/components/ui/button";
+import { Footer } from "@/components/footer";
+import { HomeContent } from "@/components/home-content";
 import { cn } from "@/lib/utils";
 
 const navLinks = [
@@ -15,14 +16,13 @@ const navLinks = [
   { href: "/contato", label: "Contato" },
 ];
 
-export function Header() {
-  const pathname = usePathname();
+function TransparentHeader() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="bg-background border-b border-border">
+    <header className="absolute top-0 left-0 right-0 z-50">
       <div className="px-16 md:px-20 py-5 md:py-6 flex items-center justify-between">
-        {/* Logo */}
+        {/* Logo branca com filtro CSS */}
         <Link href="/" className="hover:opacity-80 transition-opacity">
           <Image
             src="/logo-color.svg"
@@ -30,27 +30,31 @@ export function Header() {
             height={112}
             width={196}
             priority
-            className="h-24 w-auto md:h-28"
+            className="h-24 w-auto md:h-28 drop-shadow-md"
+            style={{ filter: "brightness(0) invert(1)" }}
           />
         </Link>
 
-        {/* Direita: nav + CTA */}
+        {/* Nav + CTA — desktop */}
         <div className="hidden md:flex items-center gap-6">
           <nav className="flex items-center gap-6">
             {navLinks.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
-                className={cn(
-                  "text-sm font-semibold transition-colors hover:text-primary",
-                  pathname === link.href ? "text-primary" : "text-foreground"
-                )}
+                className="text-sm font-semibold text-white/80 hover:text-white transition-colors"
               >
                 {link.label}
               </Link>
             ))}
           </nav>
-          <Link href="/lab" className={cn(buttonVariants({ size: "sm" }), "rounded-xl")}>
+          <Link
+            href="/lab"
+            className={cn(
+              buttonVariants({ size: "sm" }),
+              "rounded-xl bg-white text-[#111] hover:bg-white/90 border-0 font-semibold"
+            )}
+          >
             Atama Lab
           </Link>
         </div>
@@ -58,7 +62,7 @@ export function Header() {
         {/* Mobile menu */}
         <Sheet open={open} onOpenChange={setOpen}>
           <SheetTrigger
-            className="md:hidden p-2 text-foreground"
+            className="md:hidden p-2 text-white"
             aria-label="Abrir menu"
           >
             {open ? <X size={22} /> : <Menu size={22} />}
@@ -70,12 +74,7 @@ export function Header() {
                   key={link.href}
                   href={link.href}
                   onClick={() => setOpen(false)}
-                  className={cn(
-                    "px-3 py-3 rounded-md text-base font-medium transition-colors",
-                    pathname === link.href
-                      ? "text-primary bg-[var(--lab-tint)]"
-                      : "text-foreground hover:bg-muted"
-                  )}
+                  className="px-3 py-3 rounded-md text-base font-medium text-foreground hover:bg-muted transition-colors"
                 >
                   {link.label}
                 </Link>
@@ -94,5 +93,17 @@ export function Header() {
         </Sheet>
       </div>
     </header>
+  );
+}
+
+export default function AtamaBPage() {
+  return (
+    <div className="min-h-screen flex flex-col">
+      <main className="flex-1 relative">
+        <TransparentHeader />
+        <HomeContent overlapHeader />
+      </main>
+      <Footer />
+    </div>
   );
 }
