@@ -74,6 +74,7 @@ Muitas vezes o usuario vai jogar pedidos no chat sem saber exatamente o que esta
 - **Product Designer** → UI, DS, visual, acessibilidade, conceitos visuais, discovery produto-design
 - **Full Stack Dev** → implementacao, arquitetura, viabilidade tecnica, escalabilidade
 - **QA** → criterios de aceitacao, testes, qualidade, bug triage
+- **Marketing Analyst** → conversao, funil, SEO tecnico, meta tags, structured data, growth hacking, estrategia de redes sociais (TikTok, Instagram, YouTube, Vimeo, Reddit)
 
 ### Como delegar
 

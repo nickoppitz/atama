@@ -36,7 +36,7 @@ Para PMs e product designers: fluxogramas, roadmap, personas, escopo de versões
 
 - **[`product/README.md`](product/README.md)** — Guia do setor
 - **[`product/fluxograma.md`](product/fluxograma.md)** — Estrutura inicial do projeto
-- **[`product/roadmap.md`](product/roadmap.md)** — Versões V1/V2/V3 escopo e prazos — A CRIAR
+- **[`product/roadmap.md`](product/roadmap.md)** — Versões V1/V2/V3 escopo e prazos (produto + marketing integrados)
 - **[`product/personas.md`](product/personas.md)** — Personas Lab + site — A CRIAR
 
 ---
@@ -66,6 +66,21 @@ Padrões, guias e validações de acessibilidade.
 
 ---
 
+## 📣 Marketing — Growth, CRO e Canais
+
+Para o Marketing Analyst: análise de audiência, estratégia de canais, CRO, SEO e plano de lançamento.
+
+- **[`marketing/README.md`](marketing/README.md)** — Guia do setor + princípios do MA
+- **[`marketing/analise-stats-site.md`](marketing/analise-stats-site.md)** — AWStats 2025–2026 (bot vs humano) + análise do site atual + StatCounter Brasil: device, OS, browser, social, search
+- **[`marketing/estrategia-canais.md`](marketing/estrategia-canais.md)** — Canal primário por persona: TikTok/Instagram (Lab) vs busca/LinkedIn (Parceiro)
+- **[`marketing/plano-pre-lancamento.md`](marketing/plano-pre-lancamento.md)** — Calendário de aquecimento 12–31/05: 7 posts sequenciados + ativação direta
+- **[`marketing/copy-lab.md`](marketing/copy-lab.md)** — Copy de conversão para /lab: headline, subheadline, prova social, FAQ de objeções, CTA
+- **[`marketing/seo-checklist-v1.md`](marketing/seo-checklist-v1.md)** — SEO técnico obrigatório antes do go-live: 301 redirects, meta tags, OG, JSON-LD, sitemap, Search Console, Plausible
+
+**Insight crítico:** tráfego real estimado em ~500–1.000 humanos/mês (AWStats inflado por bots WordPress). Canal primário de aquisição Lab: TikTok/Instagram outbound + ativação direta via WhatsApp.
+
+---
+
 ## ⚙️ Process — Processos e Templates
 
 Workflows, templates, definições de done.
@@ -87,4 +102,4 @@ Workflows, templates, definições de done.
 
 **Arquivos marcados com "A CRIAR" devem ser preenchidos nas próximas sessões.**
 
-*Última atualização: 2026-05-10*
+*Última atualização: 2026-05-12 — Marketing knowledge base completo (4 docs criados)*

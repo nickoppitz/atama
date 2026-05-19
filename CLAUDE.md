@@ -22,7 +22,7 @@ O ponto de entrada para toda interação é o agente **`pm`** (`.claude/agents/p
 O PM:
 - Traduz pedidos em problemas bem definidos
 - Decide o que precisa ser feito e por quem
-- Delega para agentes especializados (agile-coach, product-designer, fullstack-dev, qa)
+- Delega para agentes especializados (agile-coach, product-designer, fullstack-dev, qa, marketing-analyst)
 - Filtra toda decisão pelo princípio: **isso move um KPI?**
 
 ---

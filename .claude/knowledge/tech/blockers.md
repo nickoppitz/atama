@@ -43,12 +43,28 @@ Dependências críticas que precisam ser resolvidas para desbloquear o desenvolv
 
 ---
 
+## 🟡 ALTA: Upgrade de plano KingHost (PHP → Node.js)
+
+**Status**: Aguardando aprovação de custo (pauta reunião 18/05)
+**Impacto**: Bloqueador direto para o deploy do site Next.js em produção
+**Decisão tomada**: Hospedagem KingHost, Plano Node.js I — R$14,45/mês
+**O que precisa ser feito**:
+1. Rogério/Rose aprovam custo (R$14,45/mês) na reunião de 18/05
+2. Nicolas contrata Plano Node.js I na KingHost
+3. Nicolas confirma com KingHost se `next start` roda como processo permanente (PM2)
+4. Nicolas configura Git no novo plano e faz deploy de teste
+**Owner**: Nicolas (contato técnico + contratação) + Rogério/Rose (aprovação de custo)
+**Notion**: [Validação] Upgrade plano KingHost: PHP → Node.js
+
+---
+
 ## 🟢 RESOLVIDO
 
 - ✅ Estrutura de agentes e skills
 - ✅ Kanban Produto priorizado
 - ✅ Roadmap de versões definido
+- ✅ Hospedagem: KingHost (decisão 17/05 — manter serviço conhecido, sem Vercel)
 
 ---
 
-**Desbloquear em ordem: plataforma de cursos → preço → fiscal → espaço presencial → dev inicia**
+**Desbloquear em ordem: plataforma de cursos → preço → fiscal → upgrade KingHost Node.js → espaço presencial → dev inicia**
