@@ -41,6 +41,18 @@ Nenhuma implementação de parallax, transições de página ou scroll animation
 ### Handover ao fim de sessões significativas
 Após concluir uma feature, sprint ou conjunto de decisões importantes, execute a skill `handover` para atualizar `.ai-context.md` e garantir continuidade entre sessões.
 
+### Sugestão de pauta para reunião
+Quando o usuário pedir para preparar pauta, sugestão de ata ou o que levar numa reunião, **NÃO gere conteúdo diretamente**. Primeiro:
+1. Consulte o Kanban Produto (Notion) — itens Priorizado, Block e In Progress
+2. Consulte o Kanban Ops (Notion) — itens Priorizado e Block
+3. Consulte a Matriz CSD (Notion) — dúvidas em aberto
+4. Consulte `.ai-context.md` e `.claude/knowledge/` — decisões pendentes e bloqueadores
+5. Apresente ao usuário um diagnóstico de onde o projeto está e o que está travado
+6. Proponha o que costurar na reunião: pendências → decisões necessárias → onde precisamos chegar
+7. Aguarde revisão e aprovação antes de gerar a pauta final
+
+O Agile Coach pode facilitar esse processo — especialmente quando o usuário ficou off do projeto e precisa se reorientar antes da reunião.
+
 ---
 
 ## Estrutura do Projeto
