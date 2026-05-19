@@ -1,129 +1,112 @@
 # ATA DE REUNIÃO — ATAMA WEEKLY
 
-**Data:** 18 de maio de 2026  
-**Local:** _a preencher_  
-**Duração:** _a preencher_  
-**Facilitador:** Nicolas  
-**Registrador:** Nicolas  
+**Data:** 18 de maio de 2026
+**Local:** Remoto (Google Meet)
+**Duração:** ~52 minutos
+**Facilitador:** Nicolas Oppitz
 
 ---
 
 ## PARTICIPANTES
 
-- **Rogério** — Roteirista, Co-criador do Projeto Atama
-- **Rose** — Produtora Audiovisual, Co-criadora
-- **Nicolas** — Product Designer / PM / Tech Lead
+- **Rogério Rodrigues** — Co-fundador, diretor
+- **Rose França** — Co-fundadora, produtora
+- **Nicolas Oppitz** — PM / Tech Lead / Product Designer
 
 ---
 
-## CONTEXTO DA REUNIÃO
+## CONTEXTO & OBJETIVOS
 
-Reunião semanal de alinhamento. Foco: desbloquear itens críticos para o go-live de 31/05.  
-**14 dias restantes para o lançamento do V1.**
+Primeira reunião de apresentação do site V1 em desenvolvimento. Nicolas compartilhou a tela mostrando a homepage com as duas variantes de header (A/B) e a seção do Atama Lab. O foco foi colher feedback dos fundadores sobre as escolhas de design, estrutura de navegação e roadmap de conteúdo. Ao final, o grupo discutiu a integração de pagamento para o Lab.
+
+**13 dias restantes para o lançamento do V1 (31/05/2026).**
 
 ---
 
 ## DECISÕES TOMADAS
 
-### 1. Hospedagem — KingHost Plano Node.js I
+### 1. Hospedagem — Migração KingHost para Node.js
 
-**Status:** ⏳ Aguardando aprovação
-
-**Contexto:** O novo site (Next.js) requer plano Node.js. Plano atual é PHP e não suporta o framework.
-
-**Proposta:**
-- Plano: KingHost Hospedagem Node.js I
-- Custo: R$ 14,45/mês (cobrança trimestral: R$ 43,36)
-- Inclui: 1 aplicação, 256 MB RAM, 1 GB disco, SSL gratuito, deploy via Git
-- Suficiente para o tráfego estimado do MVP (~500–1.000 visitas/mês)
-
-| Pergunta | Resposta |
-|----------|----------|
-| Rogério/Rose aprovam R$ 14,45/mês? | |
-| Nicolas pode contratar ainda essa semana? | |
-
-**Decisão:**
+**Decisão:** Nicolas vai migrar diretamente o plano na KingHost para suportar Node.js (tecnologia do novo site). Rogério e Rose estão cientes e aprovam — Nicolas coordena com o suporte da KingHost sem envolver os fundadores.
 
 ---
 
-### 2. Preço do Curso Lab
+### 2. Carousel de Projetos — Carrossel Horizontal com Vídeos Curtos
 
-**Status:** ⏳ Aguardando definição
+**Decisão:** Manter o carousel horizontal com slides individuais por obra (não vídeo único em loop como a Vulcana). Justificativas:
+- UX: usuário consegue abstrair por projeto específico
+- SEO: conteúdo separado por obra ranqueia melhor nos buscadores
+- Manutenção: mais fácil atualizar — troca-se um slide sem reeditar o todo
 
-**Contexto:** Sem preço definido não é possível finalizar a página `/lab` nem configurar o checkout (Mercado Pago). Bloqueador para o desenvolvimento.
+**Conteúdo dos slides:** vídeos curtos de 7–8 segundos. Primeiro teste: converter trailers existentes do Vimeo via serviço de IA. Se não ficar bom, a Atama edita versões curtas internamente.
 
-| Pergunta | Resposta |
-|----------|----------|
-| Valor do curso: R$ ___? | |
-| Haverá parcelamento? Quantas vezes? | |
-| Desconto para inscrição antecipada? | |
-| Data limite para inscrição? | |
-
-**Decisão:**
+**Quantidade:** máximo 5 obras em destaque na home. O restante fica na galeria de projetos.
 
 ---
 
-### 3. Plataforma de Cursos
+### 3. Nomenclatura Interna — Projetos vs. Obras
 
-**Status:** ⏳ Bloqueador crítico
+**Decisão:** Adotar terminologia correta daqui em diante:
+- **Projetos** = produções em desenvolvimento (editais, pré-produção)
+- **Obras** = produções realizadas e finalizadas
 
-**Contexto:** Essa decisão trava todo o backlog técnico do Lab. Sem ela, Nicolas não consegue iniciar a implementação da área de cursos.
-
-**Opções:**
-
-| Opção | Prós | Contras |
-|-------|------|---------|
-| **Hotmart** | Plataforma pronta, conhecida no Brasil, integração simples | Taxa por venda, menos controle |
-| **Kiwify** | Alternativa brasileira, integração direta, custo baixo | Menos nome no mercado |
-| **Solução própria** | Controle total, sem taxas externas | Mais tempo de desenvolvimento |
-
-| Pergunta | Resposta |
-|----------|----------|
-| Qual plataforma para o V1? | |
-| Se Hotmart/Kiwify: aceita abrir conta ainda essa semana? | |
-
-**Decisão:**
+Impacto no menu: discutido, mas não finalizado. Candidatos debatidos: *Cinema / TV / Projetos / Sobre / Contato*. Rogério propõe separar por linguagem (Cinema e TV), Rose concorda. Nicolas vai considerar para a próxima apresentação.
 
 ---
 
-### 4. Espaço Presencial Lab
+### 4. Depoimentos na Home — Removidos do V1
 
-**Status:** ⏳ Em negociação
-
-**Contexto:** A data de início do curso impacta diretamente o prazo de lançamento e o conteúdo da página `/lab`.
-
-| Pergunta | Resposta |
-|----------|----------|
-| Status com a Casa da Chácara (Laura)? | |
-| Data confirmada de início do curso em junho? | |
-| Endereço definitivo do espaço? | |
-| Número máximo de vagas? | |
-
-**Decisão:**
+**Decisão:** Remover a seção de depoimentos da homepage. O depoimento da Evelyn Fernandes (sugerido pela IA) é inválido — ela participou de uma oficina do Icine ministrada por Rogério, não de um curso do Atama Lab. O Atama Lab ainda não rodou sua primeira turma, portanto não há depoimentos reais. Espaço reservado para pós-V1.
 
 ---
 
-### 5. Questões Fiscais (Marcelo)
+### 5. Atama Lab na Home — Aprovado com Texto Curto
 
-**Status:** ⏳ Aguardando resultado da reunião com contador
+**Decisão:** Manter a seção do Atama Lab logo abaixo do carousel na homepage. Rogério e Rose aprovam a estrutura: o texto deve ser curto e direto, funcionando como chamada para a página `/lab`. Nenhuma seção adicional além de carousel + Atama Lab + footer para o V1.
 
-| Pergunta | Resposta |
-|----------|----------|
-| Mercado Pago aprovado fiscalmente? | |
-| PIX para inscrições: precisa emitir nota? | |
-| Modelo fiscal para cursos (R$ 400–900): como emitir? | |
+---
+
+### 6. Plataforma de Pagamento — Mercado Pago como Preferência
+
+**Decisão (pendente de pesquisa):** Mercado Pago é o candidato preferido por ser nacional, ter comunidade forte no Brasil e ter taxas competitivas. Rogério vai pesquisar e contatar o Mercado Pago para confirmar.
+
+**Premissas confirmadas:**
+- Boleto: descartado
+- Formas aceitas: cartão de crédito + Pix (Pix pode ser chave direta da Atama)
+- Taxas: a Atama absorve — não repassa ao aluno
+- Parcelamento: a definir (ex: 2x ou 3x sem acréscimo)
+
+**Fiscal (Marcelo, contador):** confirmou que consegue contabilizar independente da plataforma. Se o sistema não emitir nota individual, ele emite uma nota da Atama para um CPF dos sócios e contabiliza a entrada. Alunos de cursos geralmente não pedem nota.
+
+---
+
+### 7. Página Sobre — Memória Afetiva e Ano de Fundação
 
 **Decisão:**
+- Corrigir ano de fundação: **2012** (CNPJ é 2010, mas a Atama foi aberta em 2012 — sempre foi a data usada)
+- Resgatar o carrossel histórico de fotos da Atama (que estava no site antigo) como seção de **memória afetiva** na página Sobre — não como carrossel repetido, mas como fotos diagramadas editorialmente entre texto (layout editorial)
+- Nicolas vai considerar isso no refinamento da página Sobre
+
+---
+
+## RISCOS IDENTIFICADOS
+
+| Risco | Impacto | Mitigação |
+|-------|---------|-----------|
+| Trailers do Vimeo não convertirem bem em 7-8s por IA | Carousel sem vídeo no lançamento | Fallback: usar imagens estáticas ou editar vídeos curtos internamente |
+| Mercado Pago não atender às necessidades (taxa, cartão parcelado) | Bloqueio no checkout do Lab | Stripe como backup; Pix direto como fallback mínimo |
+| Sem preço definido do curso → checkout não pode ser implementado | Bloqueio crítico do Lab | Rogério/Rose precisam definir até 22/05 |
+| Obras e fotos históricas do site antigo perdidas no servidor | Sem memória afetiva no Sobre | Rogério verifica se tem arquivos locais; Nicolas tenta recuperar do servidor |
 
 ---
 
 ## DÚVIDAS EM ABERTO
 
-_Preencher durante a reunião_
-
-1. 
-2. 
-3. 
+1. **Menu final:** Cinema / TV / Projetos / Sobre / Contato — ou outra ordem? (Rogério/Rose definem junto com Nicolas)
+2. **Header A ou B?** Rogério e Rose viram as duas opções mas não decidiram formalmente na reunião
+3. **Preço do curso e parcelamento:** não discutido — bloqueador crítico para o checkout
+4. **Espaço presencial Lab:** data e local confirmados? (não discutido na reunião)
+5. **Fotos históricas (carrossel antigo):** Rogério tem os arquivos em alta resolução?
 
 ---
 
@@ -131,36 +114,58 @@ _Preencher durante a reunião_
 
 | # | Task | Responsável | Prazo | Status |
 |---|------|-------------|-------|--------|
-| 1 | Contratar KingHost Plano Node.js I | Nicolas | 19/05 | ⏳ |
-| 2 | Confirmar com KingHost: next start via PM2? | Nicolas | 20/05 | ⏳ |
-| 3 | Criar repositório GitHub do projeto | Nicolas | 19/05 | ⏳ |
-| 4 | Definir preço do Lab e parcelamento | Rogério + Rose | 18/05 | ⏳ |
-| 5 | Abrir conta na plataforma de cursos escolhida | Rogério ou Rose | 20/05 | ⏳ |
-| 6 | Confirmar espaço presencial + data junho | Rose + Laura | 19/05 | ⏳ |
-| 7 | Repassar resultado reunião fiscal | Rogério/Rose | 18/05 | ⏳ |
+| 1 | Escolher as 5 obras para o carousel + mandar links do Vimeo | Rogério + Rose | 22/05 | ⏳ |
+| 2 | Pesquisar Mercado Pago: cartão parcelado, Pix, taxas | Rogério | 22/05 | ⏳ |
+| 3 | Definir preço do curso e parcelamento | Rogério + Rose | 22/05 | ⏳ |
+| 4 | Migrar KingHost para plano Node.js | Nicolas | 20/05 | ⏳ |
+| 5 | Testar conversão de trailers Vimeo → vídeos curtos (7-8s) via IA | Nicolas | 23/05 | ⏳ |
+| 6 | Corrigir ano de fundação na página Sobre (2010 → 2012) | Nicolas | próximo refinamento | ⏳ |
+| 7 | Remover seção de depoimentos da homepage | Nicolas | ✅ (já identificado) | ⏳ |
+| 8 | Verificar se fotos históricas estão salvas em alta resolução | Rogério | 22/05 | ⏳ |
+| 9 | Enviar transcrição da reunião para Nicolas | Rogério | 19/05 | ✅ |
 
 ---
 
 ## PRÓXIMOS PASSOS
 
 ### Esta semana (18–23/05)
-- Nicolas: contratar KingHost + setup técnico inicial (GitHub + primeiro deploy)
-- Rogério/Rose: definir preço + plataforma de cursos
-- Rose: fechar espaço presencial
+- Nicolas: migrar KingHost + continuar refinamento do site
+- Nicolas: testar pipeline de vídeos curtos com trailers do Vimeo
+- Rogério/Rose: escolher 5 obras + mandar links
+- Rogério: pesquisar/contatar Mercado Pago
+- Rogério/Rose: definir preço e parcelamento do curso
 
 ### Semana seguinte (25–31/05) — Sprint final
-- Nicolas: implementação do site + /lab
-- Nicolas: integração Mercado Pago + checkout
-- Nicolas: 301 redirects + SEO técnico + Plausible
+- Nicolas: implementar checkout com Mercado Pago (após receber preço)
+- Nicolas: implementar carousel com vídeos (após receber links)
+- Nicolas: páginas Sobre, Projetos, Contato refinadas
+- Nicolas: redirects 301, SEO técnico, Plausible Analytics
 - **31/05: go-live**
 
 ---
 
-## OBSERVAÇÕES
+## MATRIZ SSD
 
-_Preencher durante a reunião_
+### CERTEZAS
+- Carousel horizontal com slides por obra é a abordagem correta
+- Máximo 5 obras em destaque na home
+- Depoimentos fora do V1
+- Atama Lab destacado na home, texto curto
+- Mercado Pago é o candidato de pagamento
+- Ano de fundação da Atama é 2012
+
+### SUPOSICÕES
+- Trailers do Vimeo convertem bem em vídeos curtos de 7-8s via IA
+- Mercado Pago vai atender com cartão parcelado sem repassar taxa ao aluno
+- KingHost Node.js I é suficiente para o tráfego inicial
+
+### DÚVIDAS
+- Qual o preço final do curso e parcelamento?
+- Header A ou B? (decisão formal ainda pendente)
+- Menu: estrutura de navegação final?
+- Fotos históricas estão salvas em alta resolução?
+- Espaço presencial: confirmado?
 
 ---
 
-*Ata elaborada por Nicolas — PM/Tech Lead  
-18 de maio de 2026*
+*Ata elaborada por Nicolas (PM) com base na transcrição da reunião de 18/05/2026.*
