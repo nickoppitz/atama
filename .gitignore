@@ -8,7 +8,6 @@ arquivos/
 
 # Node (se usar)
 node_modules/
-package-lock.json
 .env
 .env.local
 
