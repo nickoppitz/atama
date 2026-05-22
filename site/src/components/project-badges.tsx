@@ -34,7 +34,7 @@ export function FestivalBadge({
     width: halfW,
     height: size,
     flexShrink: 0,
-    backgroundImage: "url(/laurel-v2.png)",
+    backgroundImage: `url(${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/laurel-v2.png)`,
     backgroundSize: `${leafW}px ${leafH}px`,
     backgroundRepeat: "no-repeat",
     backgroundPosition: `${pos} center`,
@@ -119,31 +119,55 @@ interface StreamingBadgeProps {
   className?: string;
 }
 
+/**
+ * Configuração de logos de streaming.
+ * Formato: SVG (vetorial, nativo branco) preferido; PNG quando SVG indisponível.
+ * filter: apenas para logos sem versão branca no kit (Netflix).
+ */
+/**
+ * Configuração de logos de streaming.
+ * Formato: SVG (vetorial, nativo branco) preferido; PNG quando SVG indisponível.
+ * heightClass: altura visual da <img> — diferenciada por legibilidade a11y de cada marca.
+ * filter: apenas para logos sem versão branca no kit (Netflix).
+ *
+ * A11y rationale:
+ *  - Prime Video: wordmark longo e fino → h-10 (40px) para legibilidade do texto "Video"
+ *  - Nick Jr.: logo redondo com texto pequeno → h-14 (56px) pra ser legível
+ *  - Netflix: wordmark bold em bloco → h-9 (36px) suficiente pela espessura das letras
+ *  - Globoplay: wordmark compacto já legível → h-8 (32px) mantido
+ *  - Canal Futura: wordmark horizontal longo e fino → h-10 (40px)
+ */
 const platformConfig: Record<StreamingPlatform, {
-  src: string; label: string; width: number; height: number; bg: string;
+  src: string;
+  label: string;
+  width: number;
+  height: number;
+  heightClass: string;
+  filter?: string;
 }> = {
-  "amazon-prime":  { src: "/streaming-prime.png",        label: "Prime",        width: 68,  height: 40,  bg: "#1399FF" },
-  "globoplay":     { src: "/streaming-globoplay.png",    label: "Globoplay",    width: 190, height: 40,  bg: "#EB0028" },
-  "netflix":       { src: "/streaming-netflix.png",      label: "Netflix",      width: 148, height: 40,  bg: "#E50914" },
-  "nick-jr":       { src: "/streaming-nickjr.png",       label: "Nick Jr.",     width: 142, height: 40,  bg: "#F47521" },
-  "canal-futura":  { src: "/streaming-canal-futura.png", label: "Canal Futura", width: 101, height: 40,  bg: "#00A651" },
+  "amazon-prime": { src: "/logo-amazon-prime.svg", label: "Amazon Prime Video", width: 280, height: 84, heightClass: "h-12", filter: "none" },
+  "nick-jr":      { src: "/logotype-nickjr-white.svg", label: "Nick Jr.",        width: 1447, height: 403, heightClass: "h-8", filter: "none" },
+  "globoplay":    { src: "/logo-globoplay.png",     label: "Globoplay",          width: 220, height: 60,  heightClass: "h-8",  filter: "none" },
+  "canal-futura": { src: "/logo-canal-futura.png",  label: "Canal Futura",       width: 240, height: 60,  heightClass: "h-10", filter: "none" },
+  "netflix":      { src: "/logo-netflix.png",       label: "Netflix",            width: 216, height: 58,  heightClass: "h-11", filter: "brightness(0) invert(1)" },
 };
 
 export function StreamingBadge({ platform, className }: StreamingBadgeProps) {
   const config = platformConfig[platform];
+  const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
   return (
     <span
-      className={cn("inline-flex items-center justify-center rounded px-2.5 py-1", className)}
-      style={{ backgroundColor: config.bg }}
+      className={cn("inline-flex items-center justify-center", className)}
       aria-label={config.label}
     >
-      <Image
-        src={config.src}
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <img
+        src={`${basePath}${config.src}`}
         alt=""
         width={config.width}
         height={config.height}
-        className="h-4 w-auto object-contain"
-        style={{ filter: "brightness(0) invert(1)" }}
+        className={cn("w-auto object-contain", config.heightClass)}
+        style={config.filter && config.filter !== "none" ? { filter: config.filter } : undefined}
       />
     </span>
   );

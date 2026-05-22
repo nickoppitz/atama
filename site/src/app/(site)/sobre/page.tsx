@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Sobre — Atama Filmes",
   description:
-    "Conheça a Atama Filmes: produtora audiovisual fundada em Porto Alegre em 2010 por Rogério Rodrigues e Rose Rodrigues.",
+    "Conheça a Atama Filmes: produtora audiovisual fundada em Porto Alegre em 2012 por Rogério Rodrigues e Rose França.",
 };
 
 export default function SobrePage() {

@@ -21,11 +21,7 @@ export function LabPreco() {
             </p>
             <p className="text-sm text-muted-foreground mt-1">
               {/* TODO: parcelamento após decisão */}
-              Pagamento via Mercado Pago — Pix, cartão ou boleto.
-            </p>
-
-            <p className="mt-4 text-sm text-muted-foreground">
-              Turma de junho 2026 — vagas limitadas.
+              Pix, cartão ou boleto.
             </p>
 
             <Button
@@ -33,12 +29,8 @@ export function LabPreco() {
               className="mt-8 h-14 w-full sm:w-auto px-10 text-base font-semibold"
               onClick={() => setModalOpen(true)}
             >
-              Garantir minha vaga →
+              Reservar minha vaga
             </Button>
-
-            <p className="mt-3 text-xs text-muted-foreground">
-              Pagamento seguro via Mercado Pago.
-            </p>
           </div>
         </div>
       </section>

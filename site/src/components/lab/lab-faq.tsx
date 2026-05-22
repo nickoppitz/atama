@@ -7,14 +7,14 @@ import {
 
 const faqs = [
   {
-    pergunta: "Não tenho câmera ou equipamento.",
+    pergunta: "Preciso ter câmera ou equipamento próprio?",
     resposta:
-      "Não precisa. Parte do aprendizado é saber trabalhar com o que você tem — inclusive o celular.",
+      "Não. Parte do método é aprender a trabalhar com o que você tem — inclusive o celular.",
   },
   {
     pergunta: "Sou iniciante. Dá pra acompanhar?",
     resposta:
-      "O Lab foi feito para iniciantes. Não assumimos conhecimento prévio de nenhum tipo.",
+      "Feito para quem está começando. Se você não sabe nada, você está no lugar certo.",
   },
   {
     pergunta: "20 horas em 2 semanas é muito intenso?",
@@ -22,14 +22,14 @@ const faqs = [
       "É intensivo de propósito. Audiovisual se aprende fazendo, não lendo. A intensidade é parte do método.",
   },
   {
-    pergunta: "Qual o resultado esperado?",
+    pergunta: "O que eu entrego no final?",
     resposta:
-      "Você entrega um projeto real ao final do curso. Não é só teoria — você sai com algo no portfólio.",
+      "Um projeto real — feito por você, do roteiro à entrega. Você sai com algo no portfólio.",
   },
   {
     pergunta: "E se eu não puder em junho?",
     resposta:
-      "As próximas turmas estão sendo planejadas. Deixe seu e-mail e avisamos quando abrir novas vagas.",
+      "As próximas turmas estão sendo planejadas. Deixe seu e-mail e avisamos quando abrir.",
   },
 ];
 

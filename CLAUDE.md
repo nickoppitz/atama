@@ -46,10 +46,16 @@ Quando o usuário pedir para preparar pauta, sugestão de ata ou o que levar num
 1. Consulte o Kanban Produto (Notion) — itens Priorizado, Block e In Progress
 2. Consulte o Kanban Ops (Notion) — itens Priorizado e Block
 3. Consulte a Matriz CSD (Notion) — dúvidas em aberto
-4. Consulte `.ai-context.md` e `.claude/knowledge/` — decisões pendentes e bloqueadores
-5. Apresente ao usuário um diagnóstico de onde o projeto está e o que está travado
-6. Proponha o que costurar na reunião: pendências → decisões necessárias → onde precisamos chegar
-7. Aguarde revisão e aprovação antes de gerar a pauta final
+4. Consulte `.ai-context.md` e `.claude/knowledge/tech/blockers.md` — decisões pendentes e bloqueadores
+5. **Mapeie o status de Rogério e Rose:** em Kanban Produto (Priorizado, In Progress, Block), Kanban Ops e Matriz CSD, liste todos os itens com assign ou menção a Rogério/Rose. Categorize:
+   - **Block/Priorizado esperando ação deles** (com prazo) — precisam de decisão/entrega
+   - **In Progress/Concluído que já iniciaram** — peça atualização de andamento
+   - **CSD com dúvidas vinculadas a eles** — pergunte o que sabem
+   
+   Isso fornece contexto para follow-up sincero (não necessariamente cobrança, mas check-in de progresso).
+6. Apresente ao usuário um diagnóstico de onde o projeto está e o que está travado
+7. Proponha o que costurar na reunião: cobranças de negócio → decisões necessárias → onde precisamos chegar
+8. Aguarde revisão e aprovação antes de gerar a pauta final
 
 O Agile Coach pode facilitar esse processo — especialmente quando o usuário ficou off do projeto e precisa se reorientar antes da reunião.
 

@@ -11,7 +11,7 @@ export default function AtamaPage() {
 
       <div className="flex flex-col sm:flex-row gap-5 w-full max-w-lg">
         <Link
-          href="/atama/a"
+          href="/review/a"
           className="flex-1 group border border-white/10 rounded-2xl p-7 hover:border-white/25 hover:bg-white/5 transition-all"
         >
           <p className="text-[9px] tracking-[0.22em] uppercase text-white/30 mb-2">Variante</p>
@@ -20,7 +20,7 @@ export default function AtamaPage() {
         </Link>
 
         <Link
-          href="/atama/b"
+          href="/review/b"
           className="flex-1 group border border-white/10 rounded-2xl p-7 hover:border-white/25 hover:bg-white/5 transition-all"
         >
           <p className="text-[9px] tracking-[0.22em] uppercase text-white/30 mb-2">Variante</p>

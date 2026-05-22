@@ -1,6 +1,17 @@
 import type { NextConfig } from "next";
 
+const BASE_PATH = "/atama";
+
 const nextConfig: NextConfig = {
+  basePath: BASE_PATH,
+  env: {
+    NEXT_PUBLIC_BASE_PATH: BASE_PATH,
+  },
+  images: {
+    dangerouslyAllowSVG: true,
+    contentDispositionType: "attachment",
+    contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
+  },
   async redirects() {
     return [
       // Trailing slash normalização
@@ -12,16 +23,17 @@ const nextConfig: NextConfig = {
       // Notícias WordPress → home
       { source: "/noticias/:slug*", destination: "/", permanent: true },
 
-      // Attachments WordPress → listagem de projetos
+      // WordPress /quem-somos/ → /sobre
+      { source: "/quem-somos/", destination: "/sobre", permanent: true },
+      { source: "/quem-somos", destination: "/sobre", permanent: true },
+
+      // Projetos/obras WordPress → home (seção será renomeada em V2)
+      // Cobre: URLs do portfólio, attachments e backlinks externos (Wikipedia, IMDB etc.)
       {
-        source: "/projetos/:slug/attachment/:attachment*",
-        destination: "/projetos",
+        source: "/projetos/:slug*",
+        destination: "/",
         permanent: true,
       },
-
-      // Projetos individuais WordPress → listagem (V1 — sem páginas individuais)
-      { source: "/projetos/:slug/", destination: "/projetos", permanent: true },
-      { source: "/projetos/:slug", destination: "/projetos", permanent: true },
     ];
   },
 };

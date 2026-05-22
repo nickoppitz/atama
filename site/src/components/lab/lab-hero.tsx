@@ -21,8 +21,8 @@ export function LabHero() {
               <span className="block">Curso presencial em Porto Alegre.</span>
             </h1>
             <p className="mt-4 text-[clamp(16px,2.5vw,18px)] text-white/85 leading-relaxed">
-              20 horas de curso intensivo presencial. Do roteiro à entrega de um
-              projeto real. Porto Alegre, junho 2026.
+              Produção audiovisual presencial, do roteiro à entrega. 20 horas em
+              2 semanas. Porto Alegre, junho 2026.
             </p>
             <div className="mt-8 flex flex-col sm:flex-row gap-3">
               <Button
@@ -30,7 +30,7 @@ export function LabHero() {
                 className="h-14 px-8 text-base bg-white text-primary hover:bg-white/90 font-semibold"
                 onClick={() => setModalOpen(true)}
               >
-                Garantir minha vaga →
+                Reservar minha vaga
               </Button>
             </div>
           </div>
@@ -43,7 +43,7 @@ export function LabHero() {
           className="w-full h-12 text-base font-semibold"
           onClick={() => setModalOpen(true)}
         >
-          Garantir minha vaga →
+          Reservar minha vaga
         </Button>
       </div>
 

@@ -10,12 +10,12 @@ import { LabFaq } from "@/components/lab/lab-faq";
 export const metadata: Metadata = {
   title: "Atama Lab — Curso Presencial de Produção Audiovisual | Porto Alegre",
   description:
-    "20 horas em 2 semanas. Aprenda produção audiovisual com quem produziu para Amazon e Nick Jr. Turma de junho 2026 em Porto Alegre. Vagas limitadas.",
+    "Curso presencial de produção audiovisual em Porto Alegre. Do roteiro ao projeto entregue — 20 horas em 2 semanas, com quem produziu para Amazon e Nick Jr. Turma de junho 2026.",
   openGraph: {
     title: "Atama Lab — Curso Presencial de Produção Audiovisual em Porto Alegre",
     description:
-      "20 horas em 2 semanas. Aprenda produção audiovisual com quem produziu para Amazon e Nick Jr. Turma de junho 2026 em Porto Alegre. Vagas limitadas.",
-    url: "https://atamafilmes.com.br/lab",
+      "Curso presencial de produção audiovisual em Porto Alegre. Do roteiro ao projeto entregue — 20 horas em 2 semanas, com quem produziu para Amazon e Nick Jr. Turma de junho 2026.",
+    url: "https://atamafilmes.com.br/atama/lab",
     images: [
       {
         url: "/og/lab.jpg",

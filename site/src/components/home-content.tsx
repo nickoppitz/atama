@@ -312,7 +312,7 @@ export function HomeContent({ overlapHeader = false }: HomeContentProps) {
               {/* CTA mobile only */}
               <div className="mt-10 lg:hidden">
                 <Link href="/lab" className={cn(buttonVariants(), "w-full justify-center rounded-xl")}>
-                  Garantir minha vaga →
+                  Reservar minha vaga
                 </Link>
               </div>
 
@@ -355,7 +355,7 @@ export function HomeContent({ overlapHeader = false }: HomeContentProps) {
                       ["Duração", "20 horas"],
                       ["Formato", "Presencial"],
                       ["Local", "Porto Alegre, RS"],
-                      ["Turma", "Vagas limitadas"],
+                      ["Turma", "Turma reduzida"],
                     ].map(([label, value]) => (
                       <div key={label}>
                         <p className="text-[9px] tracking-[0.15em] uppercase text-muted-foreground/60 mb-0.5">
@@ -368,10 +368,10 @@ export function HomeContent({ overlapHeader = false }: HomeContentProps) {
 
                   <div className="border-t border-border pt-4 space-y-2">
                     <Link href="/lab" className={cn(buttonVariants(), "w-full justify-center rounded-xl")}>
-                      Garantir minha vaga →
+                      Reservar minha vaga
                     </Link>
                     <Link href="/lab" className={cn(buttonVariants({ variant: "ghost" }), "w-full justify-center text-[12px] text-muted-foreground")}>
-                      Saiba mais sobre o Lab
+                      Ver o Lab →
                     </Link>
                   </div>
                 </div>

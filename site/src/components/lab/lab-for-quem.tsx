@@ -2,7 +2,7 @@ import { CheckCircle, XCircle } from "lucide-react";
 
 const paraQuemE = [
   "Você está começando e quer aprender fazendo",
-  "Não tem câmera própria ou experiência prévia",
+  "Não tem câmera ou experiência prévia — não é requisito",
   "Mora em Porto Alegre ou pode estar presencialmente",
   "Quer descobrir se audiovisual é para você antes de investir em faculdade",
 ];

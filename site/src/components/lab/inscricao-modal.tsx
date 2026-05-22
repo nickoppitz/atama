@@ -37,17 +37,17 @@ export function InscricaoModal({ open, onOpenChange }: InscricaoModalProps) {
     <Dialog open={open} onOpenChange={onOpenChange}>
       <DialogContent className="sm:max-w-md">
         <DialogHeader>
-          <DialogTitle className="text-xl">Garantir minha vaga</DialogTitle>
+          <DialogTitle className="text-xl">Reservar sua vaga</DialogTitle>
           <p className="text-sm text-muted-foreground">
-            Preencha seus dados para reservar sua vaga. O pagamento é feito na próxima etapa.
+            Seus dados ficam aqui. O pagamento é na próxima etapa.
           </p>
         </DialogHeader>
 
         {submitted ? (
           <div className="py-6 text-center">
-            <p className="text-foreground font-medium">Tudo certo!</p>
+            <p className="text-foreground font-medium">Pronto.</p>
             <p className="text-sm text-muted-foreground mt-1">
-              Redirecionando para o pagamento...
+              Indo para o pagamento agora.
             </p>
           </div>
         ) : (
@@ -61,7 +61,7 @@ export function InscricaoModal({ open, onOpenChange }: InscricaoModalProps) {
                 name="nome"
                 type="text"
                 required
-                placeholder="Seu nome"
+                placeholder="Maria Silva"
                 className="h-11 px-3 rounded-md border border-input bg-background text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
               />
             </div>
@@ -98,15 +98,15 @@ export function InscricaoModal({ open, onOpenChange }: InscricaoModalProps) {
               {loading ? (
                 <>
                   <Loader2 className="mr-2 h-4 w-4 animate-spin" />
-                  Salvando...
+                  Enviando...
                 </>
               ) : (
-                "Continuar para o pagamento →"
+                "Ir para o pagamento"
               )}
             </Button>
 
             <p className="text-xs text-center text-muted-foreground">
-              Pagamento seguro via Mercado Pago — Pix, cartão ou boleto.
+              Pix, cartão ou boleto.
             </p>
           </form>
         )}
