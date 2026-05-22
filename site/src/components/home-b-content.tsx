@@ -1,7 +1,6 @@
 "use client";
 
 import Link from "next/link";
-import Image from "next/image";
 import { useRef, useState, useCallback, useEffect } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { buttonVariants } from "@/components/ui/button";
@@ -136,12 +135,11 @@ export function HomeBContent() {
             >
               <div className="absolute inset-0 bg-[#111]" aria-hidden="true" />
               {projeto.image && (
-                <Image
-                  src={projeto.image}
+                // eslint-disable-next-line @next/next/no-img-element
+                <img
+                  src={`${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}${projeto.image}`}
                   alt=""
-                  fill
-                  className="object-cover"
-                  priority={index === 0}
+                  className="absolute inset-0 w-full h-full object-cover"
                   aria-hidden="true"
                 />
               )}
@@ -367,11 +365,11 @@ export function HomeBContent() {
                               px-8 md:px-12 lg:px-16 py-10 md:py-12 flex flex-col">
                   <div className="border border-border rounded-2xl overflow-hidden bg-background flex flex-col flex-1">
                     <div className="aspect-video bg-[#0d0d0d] relative overflow-hidden">
-                      <Image
-                        src="/comer-beber-e-aprender.jpg"
+                      {/* eslint-disable-next-line @next/next/no-img-element */}
+                      <img
+                        src={`${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/comer-beber-e-aprender.jpg`}
                         alt="Cena de set de filmagem"
-                        fill
-                        className="object-cover opacity-50"
+                        className="absolute inset-0 w-full h-full object-cover opacity-50"
                       />
                       <div
                         className="absolute inset-0"
