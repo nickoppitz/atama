@@ -297,7 +297,7 @@ export function HomeBContent() {
       <div className="border-t border-border bg-background">
         <div className="px-4 sm:px-6 lg:px-section-xl py-section-md md:py-section-lg">
           <div
-            className="rounded-container border border-border overflow-hidden"
+            className="rounded-container overflow-hidden"
             style={{ backgroundColor: "var(--muted)" }}
           >
             {/* Cada coluna define seu próprio padding — mesmo valor para igualdade visual */}
@@ -362,7 +362,7 @@ export function HomeBContent() {
 
               {/* ── COL DIREITA — padding externo ao vitrine, mesma medida da col esquerda ── */}
               <div className="lg:col-span-5 border-t lg:border-t-0 px-section-md md:px-section-lg lg:px-section-xl py-section-lg flex flex-col">{/* py-10=40→48px normalizado */}
-                  <div className="border border-border rounded-surface overflow-hidden bg-background flex flex-col flex-1">
+                  <div className="rounded-surface overflow-hidden bg-background flex flex-col flex-1">
                     <div className="aspect-video bg-[#0d0d0d] relative overflow-hidden">
                       {/* eslint-disable-next-line @next/next/no-img-element */}
                       <img

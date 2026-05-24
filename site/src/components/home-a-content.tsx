@@ -320,7 +320,7 @@ export function HomeAContent({ overlapHeader = false }: HomeContentProps) {
 
             {/* Coluna card — 5/12 */}
             <div className="col-span-5 px-4 sm:px-6 lg:px-section-lg py-section-xl lg:py-24 flex flex-col justify-center">{/* px-10=40→48px normalizado; py-24=96px excede escala */}
-              <div className="border border-border rounded-surface overflow-hidden bg-background">
+              <div className="rounded-surface overflow-hidden bg-background">
                 <div className="aspect-video bg-[#0d0d0d] relative overflow-hidden">
                   <Image
                     src="/comer-beber-e-aprender.jpg"
