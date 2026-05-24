@@ -11,8 +11,8 @@ const footerLinks = [
 export function Footer() {
   return (
     <footer className="bg-background border-t border-border mt-auto">
-      <div className="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div className="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8 py-section-lg">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-section-md">
           {/* Marca */}
           <div>
             <p className="font-semibold text-foreground">Atama Filmes</p>

@@ -19,7 +19,7 @@ export function Header() {
 
   return (
     <header className="bg-background border-b border-border">
-      <div className="px-16 md:px-20 py-5 md:py-6 flex items-center justify-between">
+      <div className="px-section-xl md:px-20 py-ui-lg md:py-section-sm flex items-center justify-between">{/* md:px-20=80px excede escala */}
         {/* Logo */}
         <Link href="#" aria-label="Atama Filmes" className="hover:opacity-80 transition-opacity">
           {/* eslint-disable-next-line @next/next/no-img-element */}

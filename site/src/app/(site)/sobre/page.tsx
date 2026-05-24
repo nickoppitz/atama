@@ -22,9 +22,9 @@ export default function SobrePage() {
       </div>
 
       {/* Time */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mb-20">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-section-lg mb-20">{/* gap-10=40→48px normalizado */}
         {/* Rogério */}
-        <div className="flex flex-col gap-5">
+        <div className="flex flex-col gap-ui-lg">
           <div className="aspect-[4/3] bg-muted rounded-lg flex items-center justify-center">
             <span className="text-sm text-muted-foreground">
               Foto de Rogério Rodrigues
@@ -47,7 +47,7 @@ export default function SobrePage() {
         </div>
 
         {/* Rose */}
-        <div className="flex flex-col gap-5">
+        <div className="flex flex-col gap-ui-lg">
           <div className="aspect-[4/3] bg-muted rounded-lg flex items-center justify-center">
             <span className="text-sm text-muted-foreground">
               Foto de Rose Rodrigues

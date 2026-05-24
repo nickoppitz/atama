@@ -41,6 +41,18 @@ Nenhuma implementação de parallax, transições de página ou scroll animation
 ### Handover ao fim de sessões significativas
 Após concluir uma feature, sprint ou conjunto de decisões importantes, execute a skill `handover` para atualizar `.ai-context.md` e garantir continuidade entre sessões.
 
+### Decisões sistêmicas passam pelo time
+Toda decisão com impacto sistêmico — arquitetura, padrões de DS, onde documentar algo, modelagem de dados, escolha de biblioteca, convenções que afetam trabalho futuro — deve ser **averiguada com os agentes mais indicados** antes de ser executada (ex: `fullstack-dev` para realidade de código, `product-designer` para governança de DS, `qa` para critérios, `agile-coach` para fluxo). O PM reúne os pareceres e sintetiza. Não decidir sistêmico sozinho.
+
+### Design System — fonte canônica
+`.claude/ds/` é o repositório **canônico** de design system e padrões:
+- `principles.md` — princípios conceituais (contenção visual, escala) que orientam decisões futuras
+- `design-tokens-guideline.md` — especificação tabular dos tokens
+- `globals.css` (`site/src/app/`) — fonte de verdade dos valores em código
+- `README.md` — protocolo de sincronização Figma ↔ markdown ↔ código
+
+Princípios e padrões de design **não** vão no CLAUDE.md — este arquivo apenas aponta para `.claude/ds/`.
+
 ### Sugestão de pauta para reunião
 Quando o usuário pedir para preparar pauta, sugestão de ata ou o que levar numa reunião, **NÃO gere conteúdo diretamente**. Primeiro:
 1. Consulte o Kanban Produto (Notion) — itens Priorizado, Block e In Progress

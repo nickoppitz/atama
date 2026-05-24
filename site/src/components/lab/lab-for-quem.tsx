@@ -17,7 +17,7 @@ export function LabForQuem() {
   return (
     <section style={{ backgroundColor: "var(--lab-tint)" }} className="py-16 md:py-20">
       <div className="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-section-lg md:gap-section-xl">{/* gap-10=40→48px, gap-16=64px normalizado */}
           {/* Para quem é */}
           <div>
             <h2 className="text-[clamp(20px,3vw,24px)] font-bold text-foreground mb-6">

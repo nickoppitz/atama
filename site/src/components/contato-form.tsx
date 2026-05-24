@@ -31,7 +31,7 @@ export function ContatoForm() {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="mt-10 flex flex-col gap-5">
+    <form onSubmit={handleSubmit} className="mt-10 flex flex-col gap-ui-lg">
       <div className="flex flex-col gap-1.5">
         <label htmlFor="nome" className="text-sm font-medium text-foreground">
           Nome

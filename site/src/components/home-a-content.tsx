@@ -233,10 +233,10 @@ export function HomeAContent({ overlapHeader = false }: HomeContentProps) {
           <div className="grid grid-cols-1 lg:grid-cols-12 lg:divide-x lg:divide-border">
 
             {/* Coluna editorial — 7/12 */}
-            <div className="col-span-7 px-4 sm:px-6 lg:px-16 py-16 lg:py-24">
+            <div className="col-span-7 px-4 sm:px-6 lg:px-section-xl py-section-xl lg:py-24">{/* py-24=96px excede escala; pendente extensão sistêmica */}
 
               {/* Eyebrow com linha */}
-              <div className="flex items-center gap-5 mb-16 lg:mb-20">
+              <div className="flex items-center gap-ui-lg mb-section-xl lg:mb-20">{/* mb-20=80px excede escala */}
                 <span
                   className="font-bold tracking-[0.2em] uppercase text-primary shrink-0 leading-none"
                   style={{ fontSize: "clamp(18px, 2.2vw, 28px)" }}
@@ -291,14 +291,14 @@ export function HomeAContent({ overlapHeader = false }: HomeContentProps) {
               </p>
 
               {/* Módulos numerados */}
-              <div className="space-y-5">
+              <div className="space-y-ui-lg">
                 {[
                   ["01", "Linguagem audiovisual: planos, ângulos, luz, som"],
                   ["02", "Roteiro e narrativa aplicados ao campo"],
                   ["03", "Direção e câmera em situação real"],
                   ["04", "Edição e entrega de projeto finalizado"],
                 ].map(([n, text]) => (
-                  <div key={n} className="flex items-baseline gap-5">
+                  <div key={n} className="flex items-baseline gap-ui-lg">
                     <span className="text-[10px] font-bold tracking-[0.2em] text-primary/60 shrink-0 w-6">
                       {n}
                     </span>
@@ -311,7 +311,7 @@ export function HomeAContent({ overlapHeader = false }: HomeContentProps) {
 
               {/* CTA mobile only */}
               <div className="mt-10 lg:hidden">
-                <Link href="/lab" className={cn(buttonVariants(), "w-full justify-center rounded-xl")}>
+                <Link href="/lab" className={cn(buttonVariants(), "w-full justify-center rounded-full")}>
                   Reservar minha vaga
                 </Link>
               </div>
@@ -319,8 +319,8 @@ export function HomeAContent({ overlapHeader = false }: HomeContentProps) {
             </div>
 
             {/* Coluna card — 5/12 */}
-            <div className="col-span-5 px-4 sm:px-6 lg:px-10 py-16 lg:py-24 flex flex-col justify-center">
-              <div className="border border-border rounded-2xl overflow-hidden bg-background">
+            <div className="col-span-5 px-4 sm:px-6 lg:px-section-lg py-section-xl lg:py-24 flex flex-col justify-center">{/* px-10=40→48px normalizado; py-24=96px excede escala */}
+              <div className="border border-border rounded-surface overflow-hidden bg-background">
                 <div className="aspect-video bg-[#0d0d0d] relative overflow-hidden">
                   <Image
                     src="/comer-beber-e-aprender.jpg"
@@ -339,7 +339,7 @@ export function HomeAContent({ overlapHeader = false }: HomeContentProps) {
                   </div>
                 </div>
 
-                <div className="p-5">
+                <div className="p-ui-lg">
                   <p className="text-[9px] tracking-[0.22em] uppercase text-primary font-semibold mb-1.5">
                     Atama Lab
                   </p>
@@ -367,7 +367,7 @@ export function HomeAContent({ overlapHeader = false }: HomeContentProps) {
                   </div>
 
                   <div className="border-t border-border pt-4 space-y-2">
-                    <Link href="/lab" className={cn(buttonVariants(), "w-full justify-center rounded-xl")}>
+                    <Link href="/lab" className={cn(buttonVariants(), "w-full justify-center rounded-full")}>
                       Reservar minha vaga
                     </Link>
                     <Link href="/lab" className={cn(buttonVariants({ variant: "ghost" }), "w-full justify-center text-[12px] text-muted-foreground")}>
@@ -383,7 +383,7 @@ export function HomeAContent({ overlapHeader = false }: HomeContentProps) {
 
         {/* Bloco 2 — Prova social Evelyn */}
         <div style={{ backgroundColor: "var(--lab-tint)" }} className="border-t border-primary/10">
-          <div className="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-16 py-14 lg:py-20">
+          <div className="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-section-xl py-section-lg lg:py-20">{/* py-14=56→48px normalizado; py-20=80px excede escala */}
             <div className="grid grid-cols-1 lg:grid-cols-12 lg:items-center">
 
               <div className="col-span-8">

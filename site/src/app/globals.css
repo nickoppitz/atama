@@ -34,13 +34,43 @@
   --color-popover: var(--popover);
   --color-card-foreground: var(--card-foreground);
   --color-card: var(--card);
-  --radius-sm: calc(var(--radius) * 0.6);
-  --radius-md: calc(var(--radius) * 0.8);
-  --radius-lg: var(--radius);
-  --radius-xl: calc(var(--radius) * 1.4);
+  /* Radius — átomos shadcn (input, button, select). Escala conservadora. */
+  --radius-sm: calc(var(--radius) * 0.6);   /* 2px */
+  --radius-md: calc(var(--radius) * 0.8);   /* 3px */
+  --radius-lg: var(--radius);               /* 4px */
+  --radius-xl: calc(var(--radius) * 1.4);   /* 5px */
 
   /* Atama custom tokens */
   --color-lab-tint: var(--lab-tint);
+}
+
+/* ────────────────────────────────────────────────────────────────────
+   @theme regular (NÃO inline) — emite as custom properties no :root para
+   que o calc() concêntrico resolva em runtime. Usar `inline` aqui
+   quebraria var(--spacing-ui-*) dentro dos radius derivados.
+
+   Spacing semântico por escopo:
+     ui-*      = espaço DENTRO de componentes (padding, gap interno)
+     section-* = espaço ENTRE blocos de página (gap de seção, gutter)
+   Gera utilities: p-ui-sm, gap-ui-md, py-section-lg, etc.
+
+   Radius concêntrico: cada nível = radius do conteúdo interno + o inset
+   daquele container (cantos paralelos).
+   Princípio: .claude/ds/principles.md · Spec: design-tokens-guideline.md §3–§4
+   ──────────────────────────────────────────────────────────────────── */
+@theme {
+  --spacing-ui-xs: 0.25rem;      /* 4px  — gap mínimo, padding de badge */
+  --spacing-ui-sm: 0.5rem;       /* 8px  — gap interno de badges, dot nav */
+  --spacing-ui-md: 0.75rem;      /* 12px — padding interno de chip/input */
+  --spacing-ui-lg: 1rem;         /* 16px — padding de card padrão */
+  --spacing-section-sm: 1.5rem;  /* 24px — gap entre elementos de seção */
+  --spacing-section-md: 2rem;    /* 32px — gap entre sub-blocos */
+  --spacing-section-lg: 3rem;    /* 48px — padding vertical de seção */
+  --spacing-section-xl: 4rem;    /* 64px — gap entre colunas / blocos grandes */
+
+  --radius-card: calc(var(--radius) + var(--spacing-ui-xs));             /* 4 + 4 = 8px  — mídia / card interno */
+  --radius-surface: calc(var(--radius-card) + var(--spacing-ui-sm));     /* 8 + 8 = 16px — card de conteúdo */
+  --radius-container: calc(var(--radius-surface) + var(--spacing-ui-sm)); /* 16 + 8 = 24px — container de seção */
 }
 
 :root {

@@ -2,7 +2,8 @@
 
 > Tokens primitivos e compostos do DS Atama.
 > Fonte de verdade: `site/src/app/globals.css` + `home-c-content.tsx` (variante /c/).
-> Atualizado: 2026-05-21
+> Princípios conceituais: `.claude/ds/principles.md`
+> Atualizado: 2026-05-22
 
 ---
 
@@ -172,23 +173,59 @@ Combinações canônicas prontas para uso em código e Paper/Figma.
 | **Column gap** | `60px–64px` | Gap entre colunas no layout 2-col |
 | **Module gap** | `22px–24px` | Gap entre módulos de curriculum |
 
+### 3.3 Spacing semântico por escopo (Component vs Layout)
+
+Tokens que carregam **intenção pelo escopo de uso**. Definidos em `globals.css`
+(`@theme inline`) — geram utilities Tailwind (`p-ui-sm`, `gap-ui-md`, `py-section-lg`, etc.).
+Ver princípio em `.claude/ds/principles.md` §3.
+
+| Token CSS | Utility Tailwind | Valor | Escopo / uso |
+|---|---|---|---|
+| `--spacing-ui-xs` | `p-ui-xs` `gap-ui-xs` | `4px` | Gap mínimo, padding de badge |
+| `--spacing-ui-sm` | `p-ui-sm` `gap-ui-sm` | `8px` | Gap interno de badges, dot nav |
+| `--spacing-ui-md` | `p-ui-md` `gap-ui-md` | `12px` | Padding interno de chip/input |
+| `--spacing-ui-lg` | `p-ui-lg` `gap-ui-lg` | `16px` | Padding de card padrão |
+| `--spacing-section-sm` | `gap-section-sm` | `24px` | Gap entre elementos de seção |
+| `--spacing-section-md` | `gap-section-md` | `32px` | Gap entre sub-blocos |
+| `--spacing-section-lg` | `py-section-lg` | `48px` | Padding vertical de seção |
+| `--spacing-section-xl` | `gap-section-xl` | `64px` | Gap entre colunas / blocos grandes |
+
+> **Regra de escopo:** `ui-*` nunca espaça blocos de página; `section-*` nunca espaça
+> conteúdo interno de componente. A separação previne erros de escala.
+
 ---
 
 ## 4. Border Radius
 
-| Token CSS | Classe Tailwind | Valor computado | Figma | Uso |
-|---|---|---|---|---|
-| `--radius-sm` | `rounded-sm` | `calc(0.25rem * 0.6)` = `2px` | `2px` | Badges pequenos, micro-elementos |
-| `--radius-md` | `rounded-md` | `calc(0.25rem * 0.8)` = `3px` | `3px` | Inputs, selects |
-| `--radius-lg` | `rounded-lg` | `0.25rem` = `4px` | `4px` | Cards padrão, popovers |
-| `--radius-xl` | `rounded-xl` | `calc(0.25rem * 1.4)` = `5px` | `5px` | Modals, drawers |
-| `rounded-2xl` | `rounded-2xl` | `12px` | `12px` | — |
-| `rounded-3xl` | `rounded-3xl` | `24px` | `24px` | — |
-| *(custom)* | — | `16px` | `16px` | Course card container |
-| *(custom)* | — | `10px` | `10px` | Sales card — imagem de curso |
-| `rounded-full` | `rounded-full` | `9999px` | `9999px` | **Todos os botões pill (obrigatório em /c/)** |
+### 4.1 Átomos (shadcn) — escala conservadora
 
-> **Regra pill:** na variante /c/ todos os botões CTA são obrigatoriamente `rounded-full`. Nenhum botão usa `rounded-xl` ou `rounded-lg` como forma principal.
+Raio dos componentes pequenos (input, button, select). Multiplicativo sobre `--radius` (4px).
+
+| Token CSS | Classe Tailwind | Valor computado | Uso |
+|---|---|---|---|
+| `--radius-sm` | `rounded-sm` | `calc(0.25rem * 0.6)` = `2px` | Badges pequenos, micro-elementos |
+| `--radius-md` | `rounded-md` | `calc(0.25rem * 0.8)` = `3px` | Inputs, selects |
+| `--radius-lg` | `rounded-lg` | `0.25rem` = `4px` | Cards padrão shadcn, popovers |
+| `--radius-xl` | `rounded-xl` | `calc(0.25rem * 1.4)` = `5px` | Modals, drawers shadcn |
+
+### 4.2 Containers — radius concêntrico (derivado de inset)
+
+Raio dos containers de conteúdo. **Cada nível = radius do filho + inset do container**
+(princípio de contenção visual — `.claude/ds/principles.md` §2). Definido via `calc()`
+em `globals.css`, então a regra é auto-aplicável: novos containers herdam o comportamento.
+
+| Token CSS | Derivação | Valor | Uso |
+|---|---|---|---|
+| `--radius-card` | `--radius (4) + --spacing-ui-xs (4)` | `8px` | Mídia, card interno (ex: imagem de curso) |
+| `--radius-surface` | `--radius-card (8) + --spacing-ui-sm (8)` | `16px` | Card de conteúdo (course card container) |
+| `--radius-container` | `--radius-surface (16) + --spacing-ui-sm (8)` | `24px` | Container de seção (section card) |
+| `rounded-full` | — | `9999px` | **Todos os botões pill (obrigatório)** |
+
+> **Regra pill:** todos os botões CTA são obrigatoriamente `rounded-full`. Nenhum botão
+> usa `rounded-xl`/`rounded-lg` como forma principal.
+>
+> **Regra concêntrica:** ao criar um container novo, seu radius = radius do conteúdo
+> interno + o inset do container, arredondado para o step mais próximo da escala acima.
 
 ---
 

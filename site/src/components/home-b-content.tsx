@@ -183,10 +183,10 @@ export function HomeBContent() {
                 </h2>
 
                 {/* Badges — louros antes de streaming */}
-                <div className="flex items-center gap-5 flex-wrap">
+                <div className="flex items-center gap-ui-lg flex-wrap">
                   {/* Louros primeiro */}
                   {projeto.festivais.length > 0 && (
-                    <div className="flex gap-3 flex-wrap" aria-label="Festivais">
+                    <div className="flex gap-ui-md flex-wrap" aria-label="Festivais">
                       {projeto.festivais.map((f) => (
                         <FestivalBadge
                           key={f.label}
@@ -295,19 +295,19 @@ export function HomeBContent() {
 
       {/* ─── 2. Atama Lab — card unificado com vitrine do curso ─── */}
       <div className="border-t border-border bg-background">
-        <div className="px-4 sm:px-6 lg:px-16 py-8 md:py-12">
+        <div className="px-4 sm:px-6 lg:px-section-xl py-section-md md:py-section-lg">
           <div
-            className="rounded-3xl border border-border overflow-hidden"
+            className="rounded-container border border-border overflow-hidden"
             style={{ backgroundColor: "var(--muted)" }}
           >
             {/* Cada coluna define seu próprio padding — mesmo valor para igualdade visual */}
             <div className="grid grid-cols-1 lg:grid-cols-12 lg:items-stretch">
 
               {/* ── COL ESQUERDA — eyebrow no topo, grupo de texto centralizado no vitrine ── */}
-              <div className="lg:col-span-7 flex flex-col px-8 md:px-12 lg:px-16 py-10 md:py-12">
+              <div className="lg:col-span-7 flex flex-col px-section-md md:px-section-lg lg:px-section-xl py-section-lg">{/* py-10=40→48px normalizado */}
 
                 {/* Eyebrow fixo no topo */}
-                <div className="flex items-center gap-2 mb-8">
+                <div className="flex items-center gap-ui-sm mb-8">
                   <span className="w-1.5 h-1.5 rounded-full bg-primary shrink-0" aria-hidden="true" />
                   <span
                     className="font-bold tracking-[0.22em] uppercase text-primary"
@@ -361,9 +361,8 @@ export function HomeBContent() {
               </div>
 
               {/* ── COL DIREITA — padding externo ao vitrine, mesma medida da col esquerda ── */}
-              <div className="lg:col-span-5 border-t lg:border-t-0
-                              px-8 md:px-12 lg:px-16 py-10 md:py-12 flex flex-col">
-                  <div className="border border-border rounded-2xl overflow-hidden bg-background flex flex-col flex-1">
+              <div className="lg:col-span-5 border-t lg:border-t-0 px-section-md md:px-section-lg lg:px-section-xl py-section-lg flex flex-col">{/* py-10=40→48px normalizado */}
+                  <div className="border border-border rounded-surface overflow-hidden bg-background flex flex-col flex-1">
                     <div className="aspect-video bg-[#0d0d0d] relative overflow-hidden">
                       {/* eslint-disable-next-line @next/next/no-img-element */}
                       <img
@@ -386,7 +385,7 @@ export function HomeBContent() {
                       </div>
                     </div>
 
-                    <div className="p-5">
+                    <div className="p-ui-lg">
                       <p
                         className="tracking-[0.22em] uppercase text-primary font-semibold mb-1.5"
                         style={{ fontSize: "clamp(11px, 0.75vw, 13px)" }}
@@ -406,7 +405,7 @@ export function HomeBContent() {
                         Com Rogério e Rose
                       </p>
 
-                      <div className="border-t border-border py-4 grid grid-cols-2 gap-y-4 gap-x-4">
+                      <div className="border-t border-border py-4 grid grid-cols-2 gap-ui-lg">
                         {[
                           ["Duração", "20 horas"],
                           ["Formato", "Presencial"],

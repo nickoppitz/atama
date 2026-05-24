@@ -19,12 +19,16 @@ Start here para entender o negócio, deadlines, KPIs e stakeholders.
 
 ## 🎨 Design — Identidade e UX
 
-Para designers e product designers: referências visuais, guidelines, análises de benchmark.
+Para designers e product designers: referências visuais, design system, análises de benchmark.
 
 - **[`design/README.md`](design/README.md)** — Guia do setor
-- **[`design/benchmark-visual-ux.md`](design/benchmark-visual-ux.md)** — Análise de sites de referência
-- **[`design/benchmark-workspace/`](design/benchmark-workspace/)** — Evaluations de UX, visual, GUI padrões
-- **[`design/guidelines.md`](design/guidelines.md)** — Identidade visual (fundo branco, paleta, tipografia) — A CRIAR
+- **[`design/benchmarks/`](design/benchmarks/)** — Benchmarks visuais/UX de referências (capturas + análises)
+- **[`design/logo_atamafilmes.png`](design/logo_atamafilmes.png)** — Logo de referência
+
+**Design System (canônico) — `.claude/ds/` (fora de knowledge):**
+- **[`../ds/principles.md`](../ds/principles.md)** — Princípios conceituais (contenção visual, escala concêntrica)
+- **[`../ds/design-tokens-guideline.md`](../ds/design-tokens-guideline.md)** — Tokens: cor, tipografia, spacing, radius
+- **[`../ds/README.md`](../ds/README.md)** — Protocolo de sync Figma ↔ markdown ↔ código
 
 **Regra de ouro**: Fundo branco é identidade. Motion design é V2+, zero para V1.
 
@@ -58,7 +62,7 @@ Para devs e arquitetos: decisões técnicas, stack, bloqueadores, integrações.
 
 Padrões, guias e validações de acessibilidade.
 
-- **[`a11y/README.md`](a11y/README.md)** — Guia de acessibilidade
+- **[`a11y/README.md`](atama/.claude/knowledge/a11y/README.md)** — Guia de acessibilidade
 - **[`a11y/regras-wcag.md`](a11y/regras-wcag.md)** — WCAG 2.1 AA compliance
 - **[`a11y/color-contrast-guide.md`](a11y/color-contrast-guide.md)** — Contraste de cores
 - **[`a11y/screen-reader-mobile.md`](a11y/screen-reader-mobile.md)** — Mobile screen reader
@@ -93,7 +97,7 @@ Workflows, templates, definições de done.
 ## Como Usar Este Knowledge
 
 1. **Para decidi sobre features**: consulte [`business/context.md`](business/context.md) → KPI passa? Entra no scope?
-2. **Para design visual**: comece por [`design/benchmark-visual-ux.md`](design/benchmark-visual-ux.md) → guidelines
+2. **Para design visual**: comece por [`design/benchmarks/`](design/benchmarks/) → tokens em [`../ds/`](../ds/)
 3. **Para tech decisions**: leia [`tech/blockers.md`](tech/blockers.md) primeiro, depois stack decisions
 4. **Para entender roadmap**: [`product/fluxograma.md`](product/fluxograma.md) + [`product/roadmap.md`](product/roadmap.md)
 5. **Para acessibilidade**: revise [`a11y/regras-wcag.md`](a11y/regras-wcag.md) antes de implementar
@@ -102,4 +106,4 @@ Workflows, templates, definições de done.
 
 **Arquivos marcados com "A CRIAR" devem ser preenchidos nas próximas sessões.**
 
-*Última atualização: 2026-05-12 — Marketing knowledge base completo (4 docs criados)*
+*Última atualização: 2026-05-22 — Seção Design corrigida (trilha stale removida) + DS canônico (.claude/ds/) indexado*

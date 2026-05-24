@@ -13,7 +13,7 @@ export function LabEmenta() {
         <h2 className="text-[clamp(22px,4vw,32px)] font-bold text-foreground mb-10">
           Em 2 semanas, você vai:
         </h2>
-        <ul className="flex flex-col gap-5">
+        <ul className="flex flex-col gap-ui-lg">
           {itens.map((item, i) => (
             <li key={i} className="flex items-start gap-4">
               <span

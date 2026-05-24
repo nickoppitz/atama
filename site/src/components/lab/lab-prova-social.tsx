@@ -2,7 +2,7 @@ export function LabProvaSocial() {
   return (
     <section className="py-16 md:py-20 bg-muted">
       <div className="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 items-center">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-section-lg md:gap-section-xl items-center">{/* gap-10=40→48px, gap-16=64px normalizado */}
           {/* Foto placeholder */}
           <div className="aspect-[4/3] rounded-md bg-border overflow-hidden">
             {/* TODO: substituir por Image do next/image com foto da Evelyn */}
