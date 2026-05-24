@@ -297,7 +297,7 @@ export function HomeBContent() {
       <div className="border-t border-border bg-background">
         <div className="px-4 sm:px-6 lg:px-section-xl py-section-md md:py-section-lg">
           <div
-            className="rounded-container overflow-hidden shadow-md"
+            className="rounded-container shadow-md"
             style={{ backgroundColor: "var(--muted)" }}
           >
             {/* Cada coluna define seu próprio padding — mesmo valor para igualdade visual */}
