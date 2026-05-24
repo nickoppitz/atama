@@ -342,7 +342,7 @@ export function HomeCContent() {
           </div>
 
           {/* COL DIREITA */}
-          <div className="lg:col-span-5 border-t lg:border-t-0 border-border px-section-md md:px-section-lg lg:px-section-xl py-section-lg flex flex-col">
+          <div className="lg:col-span-5 px-section-md md:px-section-lg lg:px-section-xl py-section-lg flex flex-col">
             <div className="rounded-surface overflow-hidden bg-background flex flex-col flex-1">
               <div className="aspect-video bg-[#0d0d0d] relative overflow-hidden">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
