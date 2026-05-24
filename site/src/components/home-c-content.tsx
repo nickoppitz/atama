@@ -282,7 +282,7 @@ export function HomeCContent() {
       </div>
 
       {/* ─── 2. Atama Lab — full-width, sem elevation, margin top/bottom ─── */}
-      <div className="my-4">
+      <div className="my-3">
         <div
           className="grid grid-cols-1 lg:grid-cols-12 lg:items-stretch"
           style={{ backgroundColor: "var(--muted)" }}
