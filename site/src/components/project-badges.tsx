@@ -145,11 +145,11 @@ const platformConfig: Record<StreamingPlatform, {
   heightClass: string;
   filter?: string;
 }> = {
-  "amazon-prime": { src: "/logo-amazon-prime.svg", label: "Amazon Prime Video", width: 280, height: 84, heightClass: "h-12", filter: "none" },
-  "nick-jr":      { src: "/logotype-nickjr-white.svg", label: "Nick Jr.",        width: 1447, height: 403, heightClass: "h-8", filter: "none" },
-  "globoplay":    { src: "/logo-globoplay.png",     label: "Globoplay",          width: 220, height: 60,  heightClass: "h-8",  filter: "none" },
-  "canal-futura": { src: "/logo-canal-futura.png",  label: "Canal Futura",       width: 240, height: 60,  heightClass: "h-10", filter: "none" },
-  "netflix":      { src: "/logo-netflix.png",       label: "Netflix",            width: 216, height: 58,  heightClass: "h-11", filter: "brightness(0) invert(1)" },
+  "amazon-prime": { src: "/logo-amazon-prime.svg", label: "Amazon Prime Video", width: 102, height: 60, heightClass: "h-[60px]", filter: "none" },
+  "nick-jr":      { src: "/logotype-nickjr-white.svg", label: "Nick Jr.",        width: 213, height: 60, heightClass: "h-[60px]", filter: "none" },
+  "globoplay":    { src: "/logo-globoplay.png",     label: "Globoplay",          width: 285, height: 60,  heightClass: "h-[60px]",  filter: "none" },
+  "canal-futura": { src: "/logo-canal-futura.png",  label: "Canal Futura",       width: 152, height: 60,  heightClass: "h-[60px]", filter: "none" },
+  "netflix":      { src: "/logo-netflix.png",       label: "Netflix",            width: 222, height: 60,  heightClass: "h-[60px]", filter: "brightness(0) invert(1)" },
 };
 
 export function StreamingBadge({ platform, className }: StreamingBadgeProps) {

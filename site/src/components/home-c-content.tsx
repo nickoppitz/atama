@@ -282,13 +282,13 @@ export function HomeCContent() {
       </div>
 
       {/* ─── 2. Atama Lab — full-width, sem elevation, margin top/bottom ─── */}
-      <div className="my-section-sm">
+      <div className="my-4">
         <div
           className="grid grid-cols-1 lg:grid-cols-12 lg:items-stretch"
           style={{ backgroundColor: "var(--muted)" }}
         >
-          {/* COL ESQUERDA */}
-          <div className="lg:col-span-7 flex flex-col px-section-md md:px-section-lg lg:px-section-xl py-section-lg">
+          {/* COL ESQUERDA — Atama Lab (col-span-5) */}
+          <div className="lg:col-span-5 flex flex-col px-section-md md:px-section-lg lg:px-section-xl py-section-lg">
 
             <div className="flex items-center gap-ui-sm mb-8">
               <span className="w-1.5 h-1.5 rounded-full bg-primary shrink-0" aria-hidden="true" />
@@ -341,8 +341,8 @@ export function HomeCContent() {
 
           </div>
 
-          {/* COL DIREITA */}
-          <div className="lg:col-span-5 px-section-md md:px-section-lg lg:px-section-xl py-section-lg flex flex-col">
+          {/* COL DIREITA — Curso + Vitrine (col-span-7) */}
+          <div className="lg:col-span-7 px-section-md md:px-section-lg lg:px-section-xl py-section-lg flex flex-col">
             <div className="rounded-surface overflow-hidden bg-background flex flex-col flex-1">
               <div className="aspect-video bg-[#0d0d0d] relative overflow-hidden">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
