@@ -282,7 +282,7 @@ export function HomeCContent() {
       </div>
 
       {/* ─── 2. Atama Lab — full-width, sem elevation, margin top/bottom ─── */}
-      <div className="my-section-lg border-t border-b border-border">
+      <div className="my-section-sm">
         <div
           className="grid grid-cols-1 lg:grid-cols-12 lg:items-stretch"
           style={{ backgroundColor: "var(--muted)" }}
@@ -342,7 +342,7 @@ export function HomeCContent() {
           </div>
 
           {/* COL DIREITA */}
-          <div className="lg:col-span-5 border-t lg:border-t-0 lg:border-l border-border px-section-md md:px-section-lg lg:px-section-xl py-section-lg flex flex-col">
+          <div className="lg:col-span-5 border-t lg:border-t-0 border-border px-section-md md:px-section-lg lg:px-section-xl py-section-lg flex flex-col">
             <div className="rounded-surface overflow-hidden bg-background flex flex-col flex-1">
               <div className="aspect-video bg-[#0d0d0d] relative overflow-hidden">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
