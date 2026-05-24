@@ -298,7 +298,7 @@ export function HomeBContent() {
         <div className="px-4 sm:px-6 lg:px-section-xl py-section-md md:py-section-lg">
           <div
             className="rounded-container"
-            style={{ backgroundColor: "var(--muted)", boxShadow: "0 16px 64px -8px rgba(0,0,0,0.14), 0 4px 24px -4px rgba(0,0,0,0.08)" }}
+            style={{ backgroundColor: "var(--muted)", boxShadow: "0 32px 96px -12px rgba(0,0,0,0.22), 0 8px 40px -8px rgba(0,0,0,0.12)" }}
           >
             {/* Cada coluna define seu próprio padding — mesmo valor para igualdade visual */}
             <div className="grid grid-cols-1 lg:grid-cols-12 lg:items-stretch">
@@ -362,7 +362,7 @@ export function HomeBContent() {
 
               {/* ── COL DIREITA — padding externo ao vitrine, mesma medida da col esquerda ── */}
               <div className="lg:col-span-5 border-t lg:border-t-0 px-section-md md:px-section-lg lg:px-section-xl py-section-lg flex flex-col">{/* py-10=40→48px normalizado */}
-                  <div className="rounded-surface overflow-hidden bg-background flex flex-col flex-1" style={{ boxShadow: "0 8px 32px -4px rgba(0,0,0,0.10), 0 2px 12px -2px rgba(0,0,0,0.06)" }}>
+                  <div className="rounded-surface overflow-hidden bg-background flex flex-col flex-1" style={{ boxShadow: "0 16px 48px -6px rgba(0,0,0,0.14), 0 4px 20px -4px rgba(0,0,0,0.08)" }}>
                     <div className="aspect-video bg-[#0d0d0d] relative overflow-hidden">
                       {/* eslint-disable-next-line @next/next/no-img-element */}
                       <img
