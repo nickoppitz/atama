@@ -298,7 +298,7 @@ export function HomeBContent() {
         <div className="px-4 sm:px-6 lg:px-section-xl py-section-md md:py-section-lg">
           <div
             className="rounded-container"
-            style={{ backgroundColor: "var(--muted)", boxShadow: "0 -3px 12px -2px rgba(0,0,0,0.06) inset, 0 32px 96px -12px rgba(0,0,0,0.22), 0 8px 40px -8px rgba(0,0,0,0.12)" }}
+            style={{ backgroundColor: "var(--muted)", boxShadow: "0 -6px 24px -4px rgba(0,0,0,0.12) inset, 0 32px 96px -12px rgba(0,0,0,0.22), 0 8px 40px -8px rgba(0,0,0,0.12)" }}
           >
             {/* Cada coluna define seu próprio padding — mesmo valor para igualdade visual */}
             <div className="grid grid-cols-1 lg:grid-cols-12 lg:items-stretch">
