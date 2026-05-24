@@ -117,6 +117,7 @@ type StreamingPlatform = "amazon-prime" | "nick-jr" | "globoplay" | "netflix" | 
 interface StreamingBadgeProps {
   platform: StreamingPlatform;
   className?: string;
+  heightClass?: string;
 }
 
 /**
@@ -152,7 +153,7 @@ const platformConfig: Record<StreamingPlatform, {
   "netflix":      { src: "/logo-netflix.png",       label: "Netflix",            width: 222, height: 60,  heightClass: "h-[60px]", filter: "brightness(0) invert(1)" },
 };
 
-export function StreamingBadge({ platform, className }: StreamingBadgeProps) {
+export function StreamingBadge({ platform, className, heightClass }: StreamingBadgeProps) {
   const config = platformConfig[platform];
   const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
   return (
@@ -166,7 +167,7 @@ export function StreamingBadge({ platform, className }: StreamingBadgeProps) {
         alt=""
         width={config.width}
         height={config.height}
-        className={cn("w-auto object-contain", config.heightClass)}
+        className={cn("w-auto object-contain", heightClass ?? config.heightClass)}
         style={config.filter && config.filter !== "none" ? { filter: config.filter } : undefined}
       />
     </span>
