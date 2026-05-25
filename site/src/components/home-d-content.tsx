@@ -66,6 +66,7 @@ const TOTAL_SLIDES = projetos.length + 1; // +1 for Labs slide
 const TRANSITION_MS = 700;
 const COOLDOWN_MS = 900;
 const DELTA_THRESHOLD = 40;
+const AUTOPLAY_MS = 7000;
 
 const navLinks = [
   { label: "Sobre", href: "/sobre" },
@@ -77,6 +78,7 @@ const navLinks = [
 export function HomeDContent() {
   const [activeIndex, setActiveIndex] = useState(0);
   const [contentVisible, setContentVisible] = useState(true);
+  const [progressKey, setProgressKey] = useState(0);
   const isTransitioning = useRef(false);
   const accDelta = useRef(0);
   const deltaResetTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
@@ -90,21 +92,32 @@ export function HomeDContent() {
 
     isTransitioning.current = true;
     setContentVisible(false);
+    setProgressKey((k) => k + 1);
 
     setTimeout(() => {
       setActiveIndex(index);
       setContentVisible(true);
-    }, TRANSITION_MS * 0.35); // swap slide at 35% of fade-out
+    }, TRANSITION_MS * 0.35);
 
     setTimeout(() => {
       isTransitioning.current = false;
     }, COOLDOWN_MS);
   }, []);
 
+  // Scroll UP = next slide (dot moves up), scroll DOWN = prev slide (dot moves down)
   const goNext = useCallback(() => goToSlide(activeIndex + 1), [activeIndex, goToSlide]);
   const goPrev = useCallback(() => goToSlide(activeIndex - 1), [activeIndex, goToSlide]);
 
-  // Wheel with delta accumulation for the premium "resistance" feel
+  // Autoplay — 7s por slide
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      const next = activeIndex < TOTAL_SLIDES - 1 ? activeIndex + 1 : 0;
+      goToSlide(next);
+    }, AUTOPLAY_MS);
+    return () => clearTimeout(timer);
+  }, [activeIndex, goToSlide]);
+
+  // Wheel: deltaY > 0 (roda pra baixo) = goPrev; deltaY < 0 (roda pra cima) = goNext
   useEffect(() => {
     const onWheel = (e: WheelEvent) => {
       e.preventDefault();
@@ -120,8 +133,9 @@ export function HomeDContent() {
       if (Math.abs(accDelta.current) >= DELTA_THRESHOLD) {
         const dir = accDelta.current > 0 ? 1 : -1;
         accDelta.current = 0;
-        if (dir > 0) goNext();
-        else goPrev();
+        // Inverted: roda pra baixo = slide anterior, roda pra cima = próximo
+        if (dir > 0) goPrev();
+        else goNext();
       }
     };
 
@@ -129,7 +143,7 @@ export function HomeDContent() {
     return () => window.removeEventListener("wheel", onWheel);
   }, [goNext, goPrev]);
 
-  // Touch swipe
+  // Touch swipe: dedo pra cima = goNext (avanço), dedo pra baixo = goPrev
   const onTouchStart = useCallback((e: React.TouchEvent) => {
     touchStartY.current = e.touches[0].clientY;
   }, []);
@@ -142,11 +156,11 @@ export function HomeDContent() {
     }
   }, [goNext, goPrev]);
 
-  // Keyboard navigation
+  // Keyboard
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
-      if (e.key === "ArrowDown" || e.key === "ArrowRight") goNext();
-      if (e.key === "ArrowUp" || e.key === "ArrowLeft") goPrev();
+      if (e.key === "ArrowUp" || e.key === "ArrowLeft") goNext();
+      if (e.key === "ArrowDown" || e.key === "ArrowRight") goPrev();
     };
     window.addEventListener("keydown", onKey);
     return () => window.removeEventListener("keydown", onKey);
@@ -159,42 +173,43 @@ export function HomeDContent() {
       onTouchEnd={onTouchEnd}
     >
       {/* ── Overlay Header ── */}
-      <header className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-section-xl"
+      <header
+        className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-section-xl"
         style={{ paddingTop: "clamp(16px, 2vw, 28px)", paddingBottom: "clamp(16px, 2vw, 28px)" }}
       >
-        <Link href="/" aria-label="Atama Filmes" className="opacity-90 hover:opacity-100 transition-opacity">
+        {/* Logo: Colorido_Negativo (branco) nos slides de filme, Colorido (cor) no Labs */}
+        <Link href="/" aria-label="Atama Filmes" className="opacity-90 hover:opacity-100 transition-opacity shrink-0">
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
-            src={`${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/logo-black.svg`}
+            src={`${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/${isLabSlide ? "logo-colorido.svg" : "logo-colorido-negativo.svg"}`}
             alt="Atama Filmes"
-            className="h-20 w-auto md:h-24"
-            style={{
-              filter: isLabSlide ? "none" : "brightness(0) invert(1)",
-              transition: `filter ${TRANSITION_MS}ms`,
-            }}
+            className="h-24 w-auto md:h-28"
+            style={{ transition: `opacity ${TRANSITION_MS}ms` }}
           />
         </Link>
 
+        {/* Nav desktop */}
         <div className="hidden md:flex items-center gap-8">
-          <nav className="flex items-center gap-8">
+          <nav className="flex items-center">
             {navLinks.map((link) => (
               <Link
                 key={link.label}
                 href={link.href}
-                className="text-[15px] font-semibold transition-colors duration-300"
+                // a11y: área de toque maior com padding
+                className="px-4 py-3 text-[15px] font-semibold transition-colors duration-300"
                 style={{ color: isLabSlide ? "var(--foreground)" : "rgba(255,255,255,0.9)" }}
               >
                 {link.label}
               </Link>
             ))}
           </nav>
+
+          {/* CTA: sempre laranja (primary) */}
           <Link
             href="/lab"
             className={cn(
-              "rounded-full font-bold h-auto py-2 px-7 text-[15px] border transition-colors duration-200",
-              isLabSlide
-                ? cn(buttonVariants(), "border-transparent")
-                : "border-white text-white bg-transparent hover:bg-orange-500 hover:border-orange-500"
+              buttonVariants(),
+              "rounded-full font-bold h-auto py-2 px-7 text-[15px]"
             )}
           >
             Atama Lab
@@ -236,12 +251,13 @@ export function HomeDContent() {
               />
             </div>
 
-            {/* Content — staggered fade-in on enter */}
+            {/* Conteúdo com fade + stagger */}
             <div
-              className="absolute bottom-0 left-0 right-0 px-8 md:px-14 pb-16 md:pb-24"
+              className="absolute bottom-0 left-0 right-0 px-8 md:px-14 pb-20 md:pb-28"
               style={{
                 opacity: contentVisible && activeIndex === index ? 1 : 0,
-                transform: contentVisible && activeIndex === index ? "translateY(0)" : "translateY(20px)",
+                transform:
+                  contentVisible && activeIndex === index ? "translateY(0)" : "translateY(20px)",
                 transition: `opacity ${TRANSITION_MS * 0.8}ms cubic-bezier(0.25, 0.46, 0.45, 0.94), transform ${TRANSITION_MS * 0.8}ms cubic-bezier(0.25, 0.46, 0.45, 0.94)`,
                 transitionDelay: contentVisible && activeIndex === index ? "180ms" : "0ms",
               }}
@@ -308,7 +324,8 @@ export function HomeDContent() {
             style={{
               maxWidth: "640px",
               opacity: contentVisible && isLabSlide ? 1 : 0,
-              transform: contentVisible && isLabSlide ? "translateY(0)" : "translateY(20px)",
+              transform:
+                contentVisible && isLabSlide ? "translateY(0)" : "translateY(20px)",
               transition: `opacity ${TRANSITION_MS * 0.8}ms cubic-bezier(0.25, 0.46, 0.45, 0.94), transform ${TRANSITION_MS * 0.8}ms cubic-bezier(0.25, 0.46, 0.45, 0.94)`,
               transitionDelay: contentVisible && isLabSlide ? "180ms" : "0ms",
             }}
@@ -356,7 +373,17 @@ export function HomeDContent() {
               Turma reduzida · 20 horas · Junho 2026
             </p>
 
+            {/* Botões: secundário (outline) à esquerda, primário à direita */}
             <div className="flex gap-ui-md justify-center">
+              <Link
+                href="/lab"
+                className={cn(
+                  buttonVariants({ variant: "outline" }),
+                  "rounded-full h-auto py-3 px-8 text-base"
+                )}
+              >
+                Saiba mais
+              </Link>
               <Link
                 href="/lab"
                 className={cn(
@@ -366,33 +393,23 @@ export function HomeDContent() {
               >
                 Reservar vaga
               </Link>
-              <Link
-                href="/lab"
-                className={cn(
-                  buttonVariants({ variant: "ghost" }),
-                  "rounded-full text-muted-foreground h-auto py-3 px-8 text-base"
-                )}
-              >
-                Saiba mais →
-              </Link>
             </div>
           </div>
         </div>
       </div>
 
-      {/* ── Vertical dash navigation — bottom-to-top (flex-col-reverse) ── */}
+      {/* ── Dot Navigation vertical — flex-col-reverse: índice 0 no baixo, Labs no topo ── */}
       <nav
         aria-label="Navegação de slides"
-        className="fixed right-6 top-1/2 -translate-y-1/2 z-50 flex flex-col-reverse gap-3"
+        className="fixed right-6 top-1/2 -translate-y-1/2 z-50 flex flex-col-reverse"
       >
         {[...projetos, { slug: "lab" }].map((_, index) => {
           const isActive = index === activeIndex;
-          const dashColor = isLabSlide
-            ? isActive
-              ? "var(--foreground)"
-              : "rgba(0,0,0,0.22)"
-            : isActive
-            ? "rgba(255,255,255,1)"
+          // Active: laranja. Inactive: branco/cinza conforme slide
+          const dashColor = isActive
+            ? "var(--primary)"
+            : isLabSlide
+            ? "rgba(0,0,0,0.2)"
             : "rgba(255,255,255,0.35)";
 
           return (
@@ -401,8 +418,9 @@ export function HomeDContent() {
               onClick={() => goToSlide(index)}
               aria-label={`Ir para slide ${index + 1}`}
               aria-current={isActive ? "true" : undefined}
-              className="flex items-center justify-center group"
-              style={{ padding: "6px 0", cursor: "pointer" }}
+              className="flex items-center justify-center"
+              // a11y: área de toque mínima 44x44px para fat finger / mouse impreciso
+              style={{ padding: "11px 12px", cursor: "pointer" }}
             >
               <span
                 style={{
@@ -419,15 +437,16 @@ export function HomeDContent() {
         })}
       </nav>
 
-      {/* Slide counter — bottom left, cinematic */}
+      {/* ── Counter + Progress bar — bottom left ── */}
       <div
-        className="fixed bottom-6 left-8 md:left-14 z-50 flex items-baseline gap-1.5"
+        className="fixed bottom-6 left-8 md:left-14 z-50 flex items-center gap-3"
         style={{
           opacity: contentVisible ? 1 : 0,
           transition: `opacity 400ms`,
           transitionDelay: contentVisible ? "300ms" : "0ms",
         }}
       >
+        {/* NN / NN */}
         <span
           style={{
             fontFamily: "var(--font-c-mono, monospace)",
@@ -440,6 +459,26 @@ export function HomeDContent() {
         >
           {String(activeIndex + 1).padStart(2, "0")} / {String(TOTAL_SLIDES).padStart(2, "0")}
         </span>
+
+        {/* Progress bar — 7s por slide */}
+        <div
+          className="relative overflow-hidden rounded-full"
+          style={{
+            width: "48px",
+            height: "2px",
+            backgroundColor: isLabSlide ? "rgba(0,0,0,0.15)" : "rgba(255,255,255,0.2)",
+            transition: `background-color ${TRANSITION_MS}ms`,
+          }}
+        >
+          <span
+            key={progressKey}
+            className="absolute inset-0 origin-left rounded-full"
+            style={{
+              backgroundColor: isLabSlide ? "var(--primary)" : "rgba(255,255,255,0.8)",
+              animation: `carousel-progress ${AUTOPLAY_MS}ms linear forwards`,
+            }}
+          />
+        </div>
       </div>
     </div>
   );
