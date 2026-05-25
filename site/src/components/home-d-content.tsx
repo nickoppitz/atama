@@ -401,7 +401,7 @@ export function HomeDContent() {
       {/* ── Dot Navigation vertical — flex-col-reverse: índice 0 no baixo, Labs no topo ── */}
       <nav
         aria-label="Navegação de slides"
-        className="fixed right-6 top-1/2 -translate-y-1/2 z-50 flex flex-col-reverse"
+        className="fixed right-6 top-1/2 -translate-y-1/2 z-50 flex flex-col"
       >
         {[...projetos, { slug: "lab" }].map((_, index) => {
           const isActive = index === activeIndex;
