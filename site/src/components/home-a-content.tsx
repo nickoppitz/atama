@@ -131,7 +131,7 @@ export function HomeAContent({ overlapHeader = false }: HomeContentProps) {
               <div className="absolute inset-0 bg-[#111]" />
               {projeto.image && (
                 <Image
-                  src={projeto.image}
+                  src={`${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}${projeto.image}`}
                   alt={projeto.titulo}
                   fill
                   className="object-cover"
@@ -323,7 +323,7 @@ export function HomeAContent({ overlapHeader = false }: HomeContentProps) {
               <div className="border border-border rounded-surface overflow-hidden bg-background">
                 <div className="aspect-video bg-[#0d0d0d] relative overflow-hidden">
                   <Image
-                    src="/comer-beber-e-aprender.jpg"
+                    src={`${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/comer-beber-e-aprender.jpg`}
                     alt="Comer, Beber e Aprender"
                     fill
                     className="object-cover opacity-50"
