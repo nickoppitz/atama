@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import { ScrollbarWidthProvider } from "@/components/scrollbar-width-provider";
+import { PageTransition } from "@/components/page-transition";
 
 const inter = Inter({
   variable: "--font-sans",
@@ -31,7 +33,10 @@ export default function RootLayout({
   return (
     <html lang="pt-BR" className={`${inter.variable} h-full antialiased`}>
       <body className="min-h-full flex flex-col">
-        {children}
+        <ScrollbarWidthProvider />
+        <PageTransition>
+          {children}
+        </PageTransition>
       </body>
     </html>
   );

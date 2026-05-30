@@ -24,7 +24,7 @@ export default function HomePage() {
               "flex flex-col items-start justify-start min-h-48"
             )}
           >
-            <span className="inline-block px-3 py-1 bg-primary/10 text-primary rounded-full text-sm font-semibold mb-4 group-hover:bg-primary/20 transition-colors">
+            <span className="inline-block px-3 py-1 bg-primary/10 text-primary rounded-full text-sm font-semibold mb-4 group-hover:bg-primary/20 transition-colors duration-200 ease-out">
               Versão A
             </span>
             <h2 className="text-2xl font-bold text-foreground mb-2">
@@ -33,7 +33,7 @@ export default function HomePage() {
             <p className="text-foreground/70 flex-1">
               Exploração inicial de interface e arquitetura visual.
             </p>
-            <span className="text-primary font-semibold mt-4 group-hover:translate-x-1 transition-transform">
+            <span className="text-primary font-semibold mt-4 group-hover:translate-x-1 transition-transform duration-200 ease-out">
               Abrir →
             </span>
           </Link>
@@ -46,7 +46,7 @@ export default function HomePage() {
               "flex flex-col items-start justify-start min-h-48"
             )}
           >
-            <span className="inline-block px-3 py-1 bg-primary/10 text-primary rounded-full text-sm font-semibold mb-4 group-hover:bg-primary/20 transition-colors">
+            <span className="inline-block px-3 py-1 bg-primary/10 text-primary rounded-full text-sm font-semibold mb-4 group-hover:bg-primary/20 transition-colors duration-200 ease-out">
               Versão B
             </span>
             <h2 className="text-2xl font-bold text-foreground mb-2">
@@ -55,7 +55,7 @@ export default function HomePage() {
             <p className="text-foreground/70 flex-1">
               Carousel com projetos, seção Atama Lab com vitrine do curso, e badges de streaming.
             </p>
-            <span className="text-primary font-semibold mt-4 group-hover:translate-x-1 transition-transform">
+            <span className="text-primary font-semibold mt-4 group-hover:translate-x-1 transition-transform duration-200 ease-out">
               Abrir →
             </span>
           </Link>

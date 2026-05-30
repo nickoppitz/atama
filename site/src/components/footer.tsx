@@ -27,7 +27,7 @@ export function Footer() {
               <Link
                 key={link.href}
                 href={link.href}
-                className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+                className="text-sm text-muted-foreground hover:text-foreground transition-colors duration-200 ease-out"
               >
                 {link.label}
               </Link>
@@ -41,7 +41,7 @@ export function Footer() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Atama Filmes no Instagram (abre em nova aba)"
-              className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+              className="text-sm text-muted-foreground hover:text-foreground transition-colors duration-200 ease-out"
             >
               Instagram
             </a>
@@ -50,7 +50,7 @@ export function Footer() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Atama Filmes no Vimeo (abre em nova aba)"
-              className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+              className="text-sm text-muted-foreground hover:text-foreground transition-colors duration-200 ease-out"
             >
               Vimeo
             </a>

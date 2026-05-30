@@ -53,6 +53,7 @@ Para devs e arquitetos: decisões técnicas, stack, bloqueadores, integrações.
 - **[`tech/blockers.md`](tech/blockers.md)** — 🔴 CRÍTICO: bloqueadores que trancam o V1
 - **[`tech/stack.md`](tech/stack.md)** — Tech stack decision log — A CRIAR
 - **[`tech/integrations.md`](tech/integrations.md)** — Notas: Mercado Pago, plataforma cursos — A CRIAR
+- **[`tech/comparativo-gateways-pagamento.md`](tech/comparativo-gateways-pagamento.md)** — Comparativo de taxas Mercado Pago vs Asaas (Pix, cartão, boleto)
 
 **Bloqueador crítico**: Decisão sobre plataforma de cursos (Hotmart, Kiwify, custom).
 

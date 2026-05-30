@@ -74,7 +74,7 @@ export default function ProjetosPage() {
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-px bg-border">
         {projetos.map((projeto, i) => (
-          <div key={i} className="group bg-background p-6 hover:bg-muted/40 transition-colors">
+          <div key={i} className="group bg-background p-6 hover:bg-muted/40 transition-colors duration-200 ease-out">
             {/* Thumbnail placeholder */}
             <div className="aspect-video bg-[#111] rounded mb-5 overflow-hidden relative">
               <div className="absolute inset-0 bg-[#1a1a1a]" />
@@ -137,7 +137,7 @@ export default function ProjetosPage() {
 
       <p className="mt-10 text-[13px] text-muted-foreground">
         Catálogo em atualização.{" "}
-        <a href="/contato" className="text-foreground hover:text-primary underline underline-offset-2 transition-colors">
+        <a href="/contato" className="text-foreground hover:text-primary underline underline-offset-2 transition-colors duration-200 ease-out">
           Entre em contato
         </a>{" "}
         para licenciamento ou co-produção.

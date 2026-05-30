@@ -140,3 +140,32 @@
   from { transform: scaleX(0); }
   to   { transform: scaleX(1); }
 }
+
+/* overflow-x hidden evita flash de scrollbar em transições */
+html {
+  overflow-x: hidden;
+}
+
+/* ── Animações de entrada de página ──────────────────────────────────────────
+   Disparadas pela classe .page-entering no <html> (via PageTransition).
+   Header desce do topo após o conteúdo começar a aparecer.
+   ─────────────────────────────────────────────────────────────────────────── */
+@keyframes page-content-entry {
+  from { opacity: 0; transform: translateY(18px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes page-header-entry {
+  from { transform: translateY(-110%); }
+  to   { transform: translateY(0); }
+}
+
+/* Conteúdo: aparece primeiro */
+html.page-entering main {
+  animation: page-content-entry 520ms cubic-bezier(0, 0, 0.2, 1) both;
+}
+
+/* Header: começa a descer 180ms depois do conteúdo, para sequência elegante */
+html.page-entering header {
+  animation: page-header-entry 480ms 180ms cubic-bezier(0, 0, 0.2, 1) both;
+}

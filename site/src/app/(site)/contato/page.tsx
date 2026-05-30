@@ -27,7 +27,7 @@ export default function ContatoPage() {
           <div className="flex flex-col gap-2">
             <a
               href="mailto:contato@atamafilmes.com.br"
-              className="text-sm text-muted-foreground hover:text-primary transition-colors"
+              className="text-sm text-muted-foreground hover:text-primary transition-colors duration-200 ease-out"
             >
               contato@atamafilmes.com.br
             </a>
@@ -35,7 +35,7 @@ export default function ContatoPage() {
               href="https://instagram.com/atamafilmes"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-sm text-muted-foreground hover:text-primary transition-colors"
+              className="text-sm text-muted-foreground hover:text-primary transition-colors duration-200 ease-out"
             >
               @atamafilmes no Instagram
             </a>

@@ -79,16 +79,21 @@ export function HomeDContent() {
   const [activeIndex, setActiveIndex] = useState(0);
   const [contentVisible, setContentVisible] = useState(true);
   const [progressKey, setProgressKey] = useState(0);
+  const [isHeaderHovered, setIsHeaderHovered] = useState(false);
   const isTransitioning = useRef(false);
   const accDelta = useRef(0);
   const deltaResetTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
   const touchStartY = useRef(0);
 
   const isLabSlide = activeIndex === projetos.length;
+  // bg/border branco: hover nos slides de filme APENAS — Labs já está ótimo sem hover
+  const showLightHeader = isHeaderHovered && !isLabSlide;
+  // Conteúdo escuro (logo colorido, texto dark, CTA primary):
+  // hover sobre o header OU Labs slide (fundo claro precisa de texto legível)
+  const useDarkContent = isHeaderHovered || isLabSlide;
 
   const goToSlide = useCallback((index: number) => {
     if (isTransitioning.current) return;
-    if (index < 0 || index >= TOTAL_SLIDES) return;
 
     isTransitioning.current = true;
     setContentVisible(false);
@@ -104,9 +109,14 @@ export function HomeDContent() {
     }, COOLDOWN_MS);
   }, []);
 
-  // Scroll UP = next slide (dot moves up), scroll DOWN = prev slide (dot moves down)
-  const goNext = useCallback(() => goToSlide(activeIndex + 1), [activeIndex, goToSlide]);
-  const goPrev = useCallback(() => goToSlide(activeIndex - 1), [activeIndex, goToSlide]);
+  // Scroll infinito: wrap around nos extremos
+  const goNext = useCallback(() => {
+    goToSlide(activeIndex === TOTAL_SLIDES - 1 ? 0 : activeIndex + 1);
+  }, [activeIndex, goToSlide]);
+
+  const goPrev = useCallback(() => {
+    goToSlide(activeIndex === 0 ? TOTAL_SLIDES - 1 : activeIndex - 1);
+  }, [activeIndex, goToSlide]);
 
   // Autoplay — 7s por slide
   useEffect(() => {
@@ -133,9 +143,9 @@ export function HomeDContent() {
       if (Math.abs(accDelta.current) >= DELTA_THRESHOLD) {
         const dir = accDelta.current > 0 ? 1 : -1;
         accDelta.current = 0;
-        // Inverted: roda pra baixo = slide anterior, roda pra cima = próximo
-        if (dir > 0) goPrev();
-        else goNext();
+        // Natural: roda pra baixo (dir > 0) = próximo slide
+        if (dir > 0) goNext();
+        else goPrev();
       }
     };
 
@@ -159,8 +169,8 @@ export function HomeDContent() {
   // Keyboard
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
-      if (e.key === "ArrowUp" || e.key === "ArrowLeft") goNext();
-      if (e.key === "ArrowDown" || e.key === "ArrowRight") goPrev();
+      if (e.key === "ArrowUp" || e.key === "ArrowLeft") goPrev();
+      if (e.key === "ArrowDown" || e.key === "ArrowRight") goNext();
     };
     window.addEventListener("keydown", onKey);
     return () => window.removeEventListener("keydown", onKey);
@@ -173,47 +183,93 @@ export function HomeDContent() {
       onTouchEnd={onTouchEnd}
     >
       {/* ── Overlay Header ── */}
+      {/*
+        Estrutura espelha o header.tsx das páginas internas:
+          outer <header>  → visual (bg, border) — cobre o viewport completo
+          inner <div>     → flex container com padding — alinhado ao body content
+
+        Por que inner div precisa de marginRight:
+          - fixed usa VIEWPORT como containing block (inset-0 = 100vw)
+          - block elements usam body width = viewport − scrollbar (Windows/Mac explícito)
+          - marginRight: var(--scrollbar-width) compensa essa diferença
+          - Mac overlay scrollbars: --scrollbar-width = 0 → sem efeito
+      */}
       <header
-        className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-section-xl"
-        style={{ paddingTop: "clamp(16px, 2vw, 28px)", paddingBottom: "clamp(16px, 2vw, 28px)" }}
+        className="fixed inset-x-0 top-0 z-50"
+        style={{
+          backgroundColor: showLightHeader ? "var(--background)" : "transparent",
+          borderBottom: showLightHeader ? "1px solid var(--border)" : "1px solid transparent",
+          transition: "background-color 300ms cubic-bezier(0.25, 0.46, 0.45, 0.94), border-color 300ms cubic-bezier(0.25, 0.46, 0.45, 0.94)",
+        }}
+        onMouseEnter={() => setIsHeaderHovered(true)}
+        onMouseLeave={() => setIsHeaderHovered(false)}
       >
-        {/* Logo: Colorido_Negativo (branco) nos slides de filme, Colorido (cor) no Labs */}
-        <Link href="/" aria-label="Atama Filmes" className="opacity-90 hover:opacity-100 transition-opacity shrink-0">
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
-            src={`${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/${isLabSlide ? "logo-colorido.svg" : "logo-colorido-negativo.svg"}`}
-            alt="Atama Filmes"
-            className="h-24 w-auto md:h-28"
-            style={{ transition: `opacity ${TRANSITION_MS}ms` }}
-          />
-        </Link>
-
-        {/* Nav desktop */}
-        <div className="hidden md:flex items-center gap-8">
-          <nav className="flex items-center">
-            {navLinks.map((link) => (
-              <Link
-                key={link.label}
-                href={link.href}
-                // a11y: área de toque maior com padding
-                className="px-4 py-3 text-[15px] font-semibold transition-colors duration-300"
-                style={{ color: isLabSlide ? "var(--foreground)" : "rgba(255,255,255,0.9)" }}
-              >
-                {link.label}
-              </Link>
-            ))}
-          </nav>
-
-          {/* CTA: sempre laranja (primary) */}
-          <Link
-            href="/lab"
-            className={cn(
-              buttonVariants(),
-              "rounded-full font-bold h-auto py-2 px-7 text-[15px]"
-            )}
-          >
-            Atama Lab
+        <div
+          className="flex items-center justify-between px-section-xl md:px-20 py-ui-lg md:py-section-sm"
+          style={{ marginRight: "var(--scrollbar-width, 0px)" }}
+        >
+          {/* Logo: cross-fade Negativo (branco) ↔ Colorido (dark) */}
+          <Link href="/" aria-label="Atama Filmes" className="hover:opacity-80 transition-opacity duration-200 ease-out shrink-0">
+            <span className="relative block h-24 md:h-28" style={{ width: "auto", aspectRatio: "217/142" }}>
+              {/* White — slides escuros sem hover */}
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src={`${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/logo-negativo.svg`}
+                alt="Atama Filmes"
+                className="absolute inset-0 h-full w-auto"
+                aria-hidden={useDarkContent}
+                style={{ opacity: useDarkContent ? 0 : 1, transition: "opacity 280ms ease-out" }}
+              />
+              {/* Colorido — hover ou slide Labs */}
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src={`${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/logo-colorido-novo.svg`}
+                alt=""
+                className="absolute inset-0 h-full w-auto"
+                aria-hidden={!useDarkContent}
+                style={{ opacity: useDarkContent ? 1 : 0, transition: "opacity 280ms ease-out" }}
+              />
+            </span>
           </Link>
+
+          {/* Nav desktop */}
+          <div className="hidden md:flex items-center gap-6">
+            <nav className="flex items-center gap-4">
+              {navLinks.map((link) => (
+                <Link
+                  key={link.label}
+                  href={link.href}
+                  className={cn(
+                    "relative inline-block px-2 py-3 rounded-sm text-[15px] font-semibold transition-colors duration-200 ease-out focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-1 after:absolute after:bottom-0 after:left-0 after:h-[1.5px] after:w-0 after:bg-current after:transition-[width] after:duration-300 after:ease-out hover:after:w-full",
+                    useDarkContent
+                      ? "text-foreground hover:text-primary"
+                      : "text-white/90 hover:text-white"
+                  )}
+                >
+                  {link.label}
+                </Link>
+              ))}
+            </nav>
+
+            {/*
+              CTA — 3 estados com transição suave (border sempre 1px pra não pular layout):
+              • Film slide default  → branco sólido, borda transparente
+              • Film slide hover    → laranja primary, borda transparente
+              • Labs slide          → ghost (transparente + borda dark) — hero já tem o primary
+            */}
+            <Link
+              href="/lab"
+              className="rounded-full font-bold h-auto py-3 px-7 text-[15px] inline-flex items-center justify-center transition-transform duration-200 ease-out hover:scale-[1.02] active:scale-[0.98]"
+              style={{
+                backgroundColor: isLabSlide ? "transparent" : isHeaderHovered ? "var(--primary)" : "white",
+                color: isLabSlide ? "var(--foreground)" : isHeaderHovered ? "var(--primary-foreground)" : "var(--foreground)",
+                border: isLabSlide ? "1px solid var(--foreground)" : "1px solid transparent",
+                transition: "background-color 300ms cubic-bezier(0.25, 0.46, 0.45, 0.94), color 300ms cubic-bezier(0.25, 0.46, 0.45, 0.94), border-color 300ms cubic-bezier(0.25, 0.46, 0.45, 0.94)",
+              }}
+            >
+              Atama Lab
+            </Link>
+          </div>
         </div>
       </header>
 
@@ -241,12 +297,22 @@ export function HomeDContent() {
                 aria-hidden="true"
               />
               <div className="absolute inset-0 bg-black/15" aria-hidden="true" />
+              {/* Gradiente bottom (título) */}
               <div
                 className="absolute inset-0"
                 aria-hidden="true"
                 style={{
                   background:
                     "linear-gradient(to top, rgba(0,0,0,0.82) 0%, rgba(0,0,0,0.28) 48%, transparent 72%)",
+                }}
+              />
+              {/* Gradiente top (header a11y) */}
+              <div
+                className="absolute top-0 left-0 right-0"
+                aria-hidden="true"
+                style={{
+                  height: "200px",
+                  background: "linear-gradient(to bottom, rgba(0,0,0,0.65) 0%, transparent 100%)",
                 }}
               />
             </div>
@@ -257,7 +323,7 @@ export function HomeDContent() {
               style={{
                 opacity: contentVisible && activeIndex === index ? 1 : 0,
                 transform:
-                  contentVisible && activeIndex === index ? "translateY(0)" : "translateY(20px)",
+                  contentVisible && activeIndex === index ? "translateY(0)" : "translateY(14px)",
                 transition: `opacity ${TRANSITION_MS * 0.8}ms cubic-bezier(0.25, 0.46, 0.45, 0.94), transform ${TRANSITION_MS * 0.8}ms cubic-bezier(0.25, 0.46, 0.45, 0.94)`,
                 transitionDelay: contentVisible && activeIndex === index ? "180ms" : "0ms",
               }}
@@ -325,7 +391,7 @@ export function HomeDContent() {
               maxWidth: "640px",
               opacity: contentVisible && isLabSlide ? 1 : 0,
               transform:
-                contentVisible && isLabSlide ? "translateY(0)" : "translateY(20px)",
+                contentVisible && isLabSlide ? "translateY(0)" : "translateY(14px)",
               transition: `opacity ${TRANSITION_MS * 0.8}ms cubic-bezier(0.25, 0.46, 0.45, 0.94), transform ${TRANSITION_MS * 0.8}ms cubic-bezier(0.25, 0.46, 0.45, 0.94)`,
               transitionDelay: contentVisible && isLabSlide ? "180ms" : "0ms",
             }}
@@ -378,7 +444,7 @@ export function HomeDContent() {
               <Link
                 href="/lab"
                 className={cn(
-                  buttonVariants({ variant: "outline" }),
+                  buttonVariants({ variant: "secondary" }),
                   "rounded-full h-auto py-3 px-8 text-base"
                 )}
               >
@@ -419,8 +485,9 @@ export function HomeDContent() {
               aria-label={`Ir para slide ${index + 1}`}
               aria-current={isActive ? "true" : undefined}
               className="flex items-center justify-center"
-              // a11y: área de toque mínima 44x44px para fat finger / mouse impreciso
-              style={{ padding: "11px 12px", cursor: "pointer" }}
+              // Largura fixa (dot ativo = 28px + 12px padding cada lado = 52px)
+              // Sem largura fixa o nav jumparia ao expandir o dot ativo
+              style={{ width: "52px", padding: "11px 0", cursor: "pointer" }}
             >
               <span
                 style={{
@@ -442,8 +509,8 @@ export function HomeDContent() {
         className="fixed bottom-6 left-8 md:left-14 z-50 flex items-center gap-3"
         style={{
           opacity: contentVisible ? 1 : 0,
-          transition: `opacity 400ms`,
-          transitionDelay: contentVisible ? "300ms" : "0ms",
+          transition: "opacity 350ms ease-out",
+          transitionDelay: contentVisible ? "280ms" : "0ms",
         }}
       >
         {/* NN / NN */}
